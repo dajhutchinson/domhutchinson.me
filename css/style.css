@@ -1,0 +1,171 @@
+/*****************************************************************************
+    FONTS
+        h1 ="CollegiateBlackFLF"
+
+****************************************************************************/
+
+
+@font-face {
+    font-family: "CollegiateBlack";
+    src: url('fonts/CollegiateBlackFLF.ttf');
+}
+
+@font-face {
+    font-family: "CollegiateOutline";
+    src: url('fonts/CollegiateOutlineFLF.ttf');
+}
+
+
+@font-face {
+    font-family: "RobotoRegular";
+    src: url('fonts/RobotoCondensed-Regular.ttf');
+}
+
+@font-face {
+    font-family: "TypoGraphica";
+    src: url('fonts/TypoGraphica.otf');
+}
+
+@font-face {
+    font-family: "RalewayBlack";
+    src: url('fonts/Raleway-Black.ttf');
+}
+
+@font-face {
+    font-family: "RalewayBold";
+    src: url('fonts/Raleway-Bold.ttf');
+}
+
+body,html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+.row {
+    margin:0
+}
+/*
+ * HEADINGS
+ */
+
+h1 {
+    font-family: "CollegiateBlack";
+}
+
+/*
+ *  Main Divs
+ */
+
+/************
+ * BODY *
+ ************/
+
+.body_container {
+    background-color: #171717;
+    height: 100%;
+    padding: 0;
+    background-color: rgba(0,0,0,1);
+}
+
+#body {
+    background-color: #171717;
+    color: white;
+    height: 100%;
+    padding: 0;
+}
+
+.body_image {
+    height: 100%;
+    padding: 10px;
+    background-image: linear-gradient(to bottom right,rgba(0,0,0,0.4),rgba(0,0,0,1)),url("../img/family.JPG");
+    background-size:cover;
+    padding: 0;
+    margin:0
+}
+
+.body_title {
+    text-align: center;
+    padding: 0 auto;
+    font-size: 7vw;
+    margin: 0px;
+}
+
+.body_title:hover {
+    color:#122314;
+}
+
+/************
+ * SIDE BAR *
+ ************/
+
+.sidebar {
+    background-color: black;
+    color: white;
+    height: 100%;
+    padding: 0px;
+}
+
+.sidebar_title {
+    display: inline-block;
+    font-family: "CollegiateBlack";
+    white-space: nowrap;
+    color:#171717;
+    width:100%;
+    margin: 0px;
+    padding: 10px 30px 10px 10px;
+    font-size: 300%;
+}
+
+.sidebar_title:hover {
+    text-decoration: none;
+    color:#122314;
+}
+
+.sidebar_title:active {
+    text-decoration: none;
+}
+
+.sidebar_btn_group button {
+    background-color: black;
+    border: 1px solid #171717;
+    border-left: 0px;
+    border-right: 0px;
+    padding: 10px 0px;
+    color: #171717;
+    cursor: pointer;
+    width:100%;
+    height:80px;
+    display: block; /* vertical stack */
+    font-family: "RalewayBlack";
+    font-size: 250%;
+    font-weight: 20;
+}
+
+.sidebar_btn_group button:hover {
+    background-color: #122314;
+    color: black;
+}
+
+.sidebar_btn_group button:focus {
+    outline:0;
+    background-color: #122314;
+}
+
+.sidebar_btn_group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+.sidebar_links {
+    padding: 10px 0px;
+}
+
+.sidebar_links a {
+    color:#171717;
+    font-size:40px;
+}
+
+.sidebar_links a:hover {
+    text-decoration: none;
+    color:#122314;
+}
