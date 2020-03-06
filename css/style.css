@@ -1,6 +1,5 @@
 /*****************************************************************************
     FONTS
-        h1 ="CollegiateBlackFLF"
 
 ****************************************************************************/
 
@@ -36,11 +35,22 @@
     src: url('fonts/Raleway-Bold.ttf');
 }
 
+/*
+ *  OVERALL 
+ */
+
+:root {
+  --gutter: 20px;
+}
+
 body,html {
     height: 100%;
     overflow-x: hidden;
 }
 
+a {
+    cursor: pointer
+}
 
 .row {
     margin:0
@@ -49,8 +59,32 @@ body,html {
  * HEADINGS
  */
 
-h1 {
+p.page_heading {
     font-family: "CollegiateBlack";
+    margin:0px;
+    font-size: 50px;
+    color: lightgray
+}
+
+p.centred_page_heading {
+    font-family: "CollegiateBlack";
+    margin:0px;
+    font-size: 100px;
+    color: lightgray;
+    text-align: center
+}
+
+p.centred_page_subheading, a.centred_page_subheading {
+    font-family: "CollegiateBlack";
+    margin:0px 20px;
+    font-size: 50px;
+    color: lightgray;
+    text-align: center
+}
+
+a.centred_page_subheading:hover {
+    text-decoration: none;
+    color:#122314;
 }
 
 /*
@@ -75,7 +109,7 @@ h1 {
     padding: 0;
 }
 
-.body_image {
+.cover_image {
     height: 100%;
     padding: 10px;
     background-image: linear-gradient(to bottom right,rgba(0,0,0,0.4),rgba(0,0,0,1)),url("../img/family.JPG");
@@ -84,14 +118,16 @@ h1 {
     margin:0
 }
 
-.body_title {
+h1.cover_title {
+    font-family: "CollegiateBlack";
     text-align: center;
     padding: 0 auto;
     font-size: 7vw;
     margin: 0px;
+    color: lightgray;
 }
 
-.body_title:hover {
+.cover_title:hover {
     color:#122314;
 }
 
@@ -150,6 +186,7 @@ h1 {
 .sidebar_btn_group button:focus {
     outline:0;
     background-color: #122314;
+    color:black;
 }
 
 .sidebar_btn_group button:not(:last-child) {
@@ -165,7 +202,168 @@ h1 {
     font-size:40px;
 }
 
-.sidebar_links a:hover {
+.sidebar_links a:hover, a:active, a:focus {
     text-decoration: none;
     color:#122314;
+}
+
+/*********
+ * ABOUT *
+ *********/
+
+.page_row {
+    width:100%; /* 40px =2*margin */
+    height:50%;
+    padding: 20px;
+    background-color: #313131;
+}
+
+.about_pic {
+    background-image: url("../img/me_sunglasses.PNG");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+}
+
+/******************
+ * QUALIFICATIONS *
+ ******************/
+
+.horizontal_scroll_wrapper {
+  padding: var(--gutter) 0;
+  display: grid;
+  grid-gap: var(--gutter) 0;
+  grid-template-columns: var(--gutter) 1fr var(--gutter);
+  align-content: start;
+}
+
+.horizontal_scroll_wrapper > * {
+  grid-column: 2 / -2;
+}
+
+.horizontal_scroll_wrapper > .full {
+  grid-column: 1 / -1;
+}
+
+.horizontal_scroll_list {
+  display: grid;
+  grid-gap: calc(var(--gutter) / 2);
+  grid-template-columns: 10px;
+  grid-template-rows: minmax(100%, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: calc(30% - var(--gutter) * 2);
+    
+  list-style: none;
+  
+  overflow-x: scroll;
+  padding-left: 0px;
+  padding-bottom: calc(.75 * var(--gutter));
+  margin-bottom: calc(-.25 * var(--gutter));
+}
+
+.horizontal_scroll_list:before, .horizontal_scroll_list:after {
+  content: '';
+  width: 10px;
+}
+
+.no-scrollbar {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontal_scroll_item {
+    background-color: #313131;
+    padding: 20px 0;
+    margin: 0px 10px
+}
+
+.horizontal_scroll_item h1 {
+    text-align: center;
+    margin: 0;
+    font-family: "CollegiateBlack";
+    font-size: 40px;
+    color: lightgray
+}
+
+.horizontal_scroll_item h2 {
+    text-align: center;
+    margin: 10px;
+    font-family: "CollegiateBlack";
+    font-size: 20px;
+    color: lightgray
+}
+
+.horizontal_scroll_item ul {
+    margin: 10px;
+    font-size: 20px;
+    color: lightgray;
+    list-style: none;
+    margin: 0px 20px
+}
+
+.horizontal_scroll_item li:before { 
+    content: "";
+    border-color: transparent lightgray;
+    border-style: solid;
+    border-width: 0.35em 0 0.35em 0.45em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -1em;
+    top: 0.9em;
+    position: relative;
+}
+
+#qualification_view_options {
+    text-align: center
+}
+
+.horizontal_ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%
+}
+
+.horizontal_ul > li {
+    float:left;
+    margin:0 10px;
+    font-family: "CollegiateBlack";
+    background-color: #333333;
+    height: 100%;
+    width: 23%;
+    text-align: center
+}
+
+.qual_overview_ul li {
+    height: 100%
+}
+
+.qual_overview_detail_ul {
+    list-style: none
+}
+
+.qual_overview_detail_ul li {
+    font-family: arial;
+    text-align: left;
+    height: 100%
+}
+
+.qual_overview_detail_ul li:before { 
+    content: "";
+    border-color: transparent lightgray;
+    border-style: solid;
+    border-width: 0.35em 0 0.35em 0.45em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -1em;
+    top: 0.9em;
+    position: relative;
 }
