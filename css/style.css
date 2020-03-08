@@ -40,7 +40,7 @@
  */
 
 :root {
-  --gutter: 20px;
+  --gutter: 0px;
 }
 
 body,html {
@@ -55,6 +55,15 @@ a {
 .row {
     margin:0
 }
+
+.environment {
+    display: flex; flex-flow: column; height: 100%
+}
+
+.enivronment_header {
+    flex:0 1 auto;
+}
+
 /*
  * HEADINGS
  */
@@ -71,7 +80,7 @@ p.centred_page_heading {
     margin:0px;
     font-size: 100px;
     color: lightgray;
-    text-align: center
+    text-align: center;
 }
 
 p.centred_page_subheading, a.centred_page_subheading {
@@ -91,9 +100,9 @@ a.centred_page_subheading:hover {
  *  Main Divs
  */
 
-/************
+/********
  * BODY *
- ************/
+ ********/
 
 .body_container {
     background-color: #171717;
@@ -211,16 +220,14 @@ h1.cover_title {
  * ABOUT *
  *********/
 
-.page_row {
-    width:100%; /* 40px =2*margin */
-    height:50%;
-    padding: 20px;
-    background-color: #313131;
+.about_row {
+    display: flex;
+    flex: 1 1 auto;
 }
 
 .about_pic {
-    background-image: url("../img/me_sunglasses.PNG");
-    background-size:contain;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../img/me_sunglasses.PNG");
+    background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
@@ -231,10 +238,9 @@ h1.cover_title {
  ******************/
 
 .horizontal_scroll_wrapper {
-  padding: var(--gutter) 0;
+  padding: 0;
   display: grid;
-  grid-gap: var(--gutter) 0;
-  grid-template-columns: var(--gutter) 1fr var(--gutter);
+  grid-gap: 0;
   align-content: start;
 }
 
@@ -248,18 +254,18 @@ h1.cover_title {
 
 .horizontal_scroll_list {
   display: grid;
-  grid-gap: calc(var(--gutter) / 2);
-  grid-template-columns: 10px;
+  grid-gap: 0px;
+  grid-template-columns: 0px;
   grid-template-rows: minmax(100%, 1fr);
   grid-auto-flow: column;
-  grid-auto-columns: calc(30% - var(--gutter) * 2);
+  grid-auto-columns: 25%;
     
   list-style: none;
   
   overflow-x: scroll;
   padding-left: 0px;
-  padding-bottom: calc(.75 * var(--gutter));
-  margin-bottom: calc(-.25 * var(--gutter));
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .horizontal_scroll_list:before, .horizontal_scroll_list:after {
@@ -278,11 +284,9 @@ h1.cover_title {
 
 .horizontal_scroll_item {
     background-color: #313131;
-    padding: 20px 0;
-    margin: 0px 10px
 }
 
-.horizontal_scroll_item h1 {
+.horizontal_scroll_item h1, .experience_box h1 {
     text-align: center;
     margin: 0;
     font-family: "CollegiateBlack";
@@ -290,7 +294,7 @@ h1.cover_title {
     color: lightgray
 }
 
-.horizontal_scroll_item h2 {
+.horizontal_scroll_item h2, .experience_box h2 {
     text-align: center;
     margin: 10px;
     font-family: "CollegiateBlack";
@@ -323,24 +327,6 @@ h1.cover_title {
     text-align: center
 }
 
-.horizontal_ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  height: 100%
-}
-
-.horizontal_ul > li {
-    float:left;
-    margin:0 10px;
-    font-family: "CollegiateBlack";
-    background-color: #333333;
-    height: 100%;
-    width: 23%;
-    text-align: center
-}
-
 .qual_overview_ul li {
     height: 100%
 }
@@ -366,4 +352,56 @@ h1.cover_title {
     left: -1em;
     top: 0.9em;
     position: relative;
+}
+
+/**************
+ * EXPERIENCE *
+ **************/
+
+.experience_box {
+    background-color: #333333;
+    color: lightgray;
+    margin: 0 20px 20px 20px;
+    padding: 20px;
+}
+
+a.company_anchor {
+    font-family: "CollegiateBlack";
+    margin:0px;
+    color: lightgray;
+    cursor: default;
+    text-decoration: none;
+}
+
+/************
+ * PROJECTS *
+ ************/
+
+#projects_content {
+    flex: 1 1 auto;
+}
+
+.projects_footer {
+    flex:0 1 auto
+}
+
+.projects_bar {
+    grid-auto-columns: 22%;
+}
+
+.projects_bar_item {
+    height: 100%;
+    background-color: #333333;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#project_footer ul li a {
+    display: block;
+    height: 100%;
+    text-align: center;
+    font-family: "CollegiateBlack";
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
 }

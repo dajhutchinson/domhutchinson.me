@@ -9,34 +9,35 @@
         <script src="https://kit.fontawesome.com/5a3a6d8816.js" crossorigin="anonymous"></script>
         <script src="js/sidebar.js"></script>
         <script src="js/qualifications.js"></script>
+        <script src="js/projects.js"></script>
     </head>
     <body>
         <div class="row " style="height:100%">
             <div class="col-sm-10 body_container">
                 <div id="body">
-                    <!-- COVER-->
+                    <!-- COVER -->
                     <div class="cover_image">
                         <div style="padding-top: 40vh;">
                             <h1 class="cover_title">DOM HUTCHINSON</h1>
                         </div>
                     </div>
+                    <!-- END COVER-->
                     <!-- ABOUT
-                    <div class="page_row">
-                        <p class="page_heading">Dom Hutchinson</p>
-                        <div class="row" style="height:90%;">
-                            <div class="col-sm-6" style="height:100%;background-color: white"></div>
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-4 about_pic" style="height:100%"></div>
+                    <div class="environment">
+                        <div class="enivronment_header">
+                            <p class="centred_page_heading">Dom Hutchinson</p>
+                        </div>
+                        <div class="about_row">
+                            <div class="experience_box" style="flex:1"></div>
+                            <div class="experience_box about_pic" style="flex:1; background-color: transparent"></div>
+                        </div>
+                        <div class="about_row">
+                            <div class="experience_box" style="flex:1"></div>
+                            <div class="experience_box" style="flex:1"></div>
+                            <div class="experience_box" style="flex:1"></div>
                         </div>
                     </div>
-                    <div class="page_row">
-                        <div class="row" style="height:100%;">
-                            <div class="col-sm-4" style="height:100%;background-color: lightblue"></div>
-                            <div class="col-sm-4" style="height:100%;background-color: lightcyan"></div>
-                            <div class="col-sm-4" style="height:100%;background-color: lightgray"></div>
-                        </div>
-                    </div>
-
+                    <!-- END ABOUT -->
                     <!-- QUALIFCATION
                     <p class="centred_page_heading">Qualifications</p>
                     <div id="qualification_view_options">
@@ -44,193 +45,278 @@
                         <a class="centred_page_subheading" id="qual_timeline_btn" onclick="qual_timeline()">Timeline</a>
                     </div>
                     <div id="qualification_content">
-
+                        
                     <!--OVERVIEW VIEW
-                    <ul class="horizontal_ul qual_overview_ul" style="height: 400px">
-                        <li>Maths &amp; Computer Science MEng<br>
-                            In Progress
-                            <hr style="margin: 0 5%; border-top-color: lightgray">
+                        <div style="display: flex">
+                            <div class="experience_box" style="flex:1">
+                                <h1>Masters</h1>
+                                <hr style="margin: 0 5%; border-top-color: lightgray">
+                                <h2>MEng in Maths & CS</h2>
+                                <h2>In Progress</h2>
+                                <h2>University of Bristol</h2>
+                                    <ul class="qual_overview_detail_ul">
+                                        <li>Year 1 - 77%</li>
+                                        <li>Year 2 - 73%</li>
+                                        <li>Year 3 - In Progess</li>
+                                        <li>Year 4 - TODO</li>
+                                    </ul>
+                            </div>
+                            <div class="experience_box" style="flex:1">
+                                <h1>A-Levels</h1>
+                                <hr style="margin: 0 5%; border-top-color: lightgray">
+                                <h2>3A* A</h2>
+                                <h2>Oundle School</h2>
+                                    <ul class="qual_overview_detail_ul">
+                                        <li>Maths. - A*</li>
+                                        <li>Further Maths. - A*</li>
+                                        <li>Pre-U Physics - D2 (A*)</li>
+                                        <li>Computer Science - A</li>
+                                    </ul>
+                            </div>
+                            <div class="experience_box" style="flex:1">
+                                <h1>GCSEs</h1>
+                                <hr style="margin: 0 5%; border-top-color: lightgray">
+                                <h2>6A* 4A</h2>
+                                <h2>Oundle School</h2>
                                 <ul class="qual_overview_detail_ul">
-                                    <li>Year 1 - 77%</li>
-                                    <li>Year 2 - 73%</li>
-                                    <li>Year 3 - In Progess</li>
-                                    <li>Year 4 - TODO</li>
+                                    <li>A* - Maths, English, Chemistry, Physics, Geography &amp; Computing</li>
+                                    <li>A  - Biology, French, RS &amp; Latin</li>
                                 </ul>
-                            </li>
-                        <li>A-Levels<br>
-                            3A* A
-                            <hr style="margin: 0 5%; border-top-color: lightgray">
-                                <ul class="qual_overview_detail_ul">
-                                    <li>Maths. - A*</li>
-                                    <li>Further Maths. - A*</li>
-                                    <li>Pre-U Physics - D2 (A*)</li>
-                                    <li>Computer Science - A</li>
-                                </ul>
-                            </li>
-                        <li>GCSEs<br>
-                            6A* 4A
-                            <hr style="margin: 0 5%; border-top-color: lightgray">
-                            <ul class="qual_overview_detail_ul">
-                                <li>A* - Maths, English, Chemistry, Physics, Geography &amp; Computing</li>
-                                <li>A  - Biology, French, RS &amp; Latin</li>
-                            </ul>
-                        </li>
-                        <li>Other<br><br>
-                            <hr style="margin: 0 5%; border-top-color: lightgray">
-                                <ul class="qual_overview_detail_ul">
-                                    <li>DofE Gold - 2019</li>
-                                    <li>DofE Silver - 2015</li>
-                                    <li>DofE Bronze - 2013</li>
-                                    <li>Major Academic Scholarship (Oundle School) - 2012</li>
-                                    <li>5x School Computing Prize (2012-2017)</li>
-                                    <li>UKMT Gold - 1x Senior, 3x Intermediate, 3x Junior</li>
-                                </ul>
-                            </li>
-                    </ul>
+                            </div>
+                            <div class="experience_box" style="flex:1">
+                                <h1>Other</h1>
+                                <hr style="margin: 0 5%; border-top-color: lightgray">
+                                    <ul class="qual_overview_detail_ul">
+                                        <li>DofE Gold - 2019</li>
+                                        <li>DofE Silver - 2015</li>
+                                        <li>DofE Bronze - 2013</li>
+                                        <li>Major Academic Scholarship (Oundle School) - 2012</li>
+                                        <li>5x School Computing Prize (2012-2017)</li>
+                                        <li>UKMT Gold - 1x Senior, 3x Intermediate, 3x Junior</li>
+                                    </ul>
+                            </div>
+                        </div>
                     
                     <!-- TIMELINE VIEW
-                    <ul class="horizontal_scroll_list full no-scrollbar">
-                        <li class="horizontal_scroll_item">
-                            <h1>2020</h1>
+                        <ul class="horizontal_scroll_list full no-scrollbar">
+                            <li style="height: 100%">
+                                <div class="experience_box" style="height: 100%">
+                                    <h1>2020</h1>
+                                    <hr style="margin: 0 5%; border-top-color: lightgray">
+                                    <h2>MEng - Year 3</h2>
+                                    <h2>WIP (82%)</h2>
+                                    <div class="centre_container">
+                                        <ul>
+                                            <li>Statistics 2 - 91%</li>
+                                            <li>Machine Learning - 75%</li>
+                                            <li>Image Processing &amp Computer Vision - 70%</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="height: 100%">
+                                <div class="experience_box" style="height: 100%">
+                                    <h1>2019</h1>
+                                    <hr style="margin: 0 5%; border-top-color: lightgray">
+                                    <h2>MEng - Year 2</h2>
+                                    <h2>First (73%)</h2>
+                                    <div class="centre_container">
+                                        <ul>
+                                            <li>Statistics 1 - 83%</li>
+                                            <li>Combinatorics - 78%</li>
+                                            <li>Symbols, Patterns &amp Signals - 74%</li>
+                                            <li>Data Structures &amp Algorithms - 73%</li>
+                                            <li>Language Engineering - 70%</li>
+                                            <li>Probability 2 - 70%</li>
+                                            <li>Multivariable Calculus - 59%</li>
+                                        </ul>
+                                        <hr style="margin: 10px 5%; border-top-color: lightgray">
+                                        <ul>
+                                            <li>Gold DofE</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="height: 100%">
+                                <div class="experience_box" style="height: 100%">
+                                    <h1>2018</h1>
+                                    <hr style="margin: 0 5%; border-top-color: lightgray">
+                                    <h2>MEng - Year 1</h2>
+                                    <h2>First (77%)</h2>
+                                    <div class="centre_container">
+                                        <ul>
+                                            <li>Algorithms - 91%</li>
+                                            <li>Functional Programming - 88%</li>
+                                            <li>Foundations &amp Proof - 84%</li>
+                                            <li>Analysis 1A - 81%</li>
+                                            <li>Intro to Group Theory - 77%</li>
+                                            <li>Imperative Programming - 74%</li>
+                                            <li>Linear Algebra &amp Geometry - 72%</li>
+                                            <li>Calculus 1 - 71%</li>
+                                            <li>OO Programming - 70%</li>
+                                            <li>Probability 1 - 68%</li>
+                                        </ul>
+                                        <hr style="margin: 10px 5%; border-top-color: lightgray">
+                                        <ul>
+                                            <li>CS50 Harvard</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="height: 100%">
+                                <div class="experience_box" style="height: 100%">
+                                    <h1>2017</h1>
+                                    <hr style="margin: 0 5%; border-top-color: lightgray">
+                                    <h2>A-Levels</h2>
+                                    <h2>3A* 1A</h2>
+                                    <div class="centre_container">
+                                        <ul>
+                                            <li>Maths. - A*</li>
+                                            <li>Further Maths. - A*</li>
+                                            <li>Pre-U Physics - D2 (A*)</li>
+                                            <li>Computer Science - A</li>
+                                        </ul>
+                                        <hr style="margin: 10px 5%; border-top-color: lightgray">
+                                        <ul>
+                                            <li>UKMT Senior - Gold</li>
+                                            <li>School Computing Prize</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="height: 100%">
+                                <div class="experience_box" style="height: 100%">
+                                    <h1>2016</h1>
+                                    <hr style="margin: 10px 5%; border-top-color: lightgray">
+                                    <div class="centre_container">
+                                        <ul>
+                                            <li>UKMT Senior - Silver</li>
+                                            <li>Year Computing Prize</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="height: 100%">
+                                <div class="experience_box" style="height: 100%">
+                                    <h1>2015</h1>
+                                    <hr style="margin: 0 5%; border-top-color: lightgray">
+                                    <h2>GCSEs</h2>
+                                    <h2>6A* 4A</h2>
+                                    <hr style="margin: 0 5%; border-top-color: lightgray">
+                                    <div class="centre_container">
+                                        <ul>
+                                            <li>Maths - A*</li>
+                                            <li>English - A*</li>
+                                            <li>Physics - A*</li>
+                                            <li>Chemistry -A* </li>
+                                            <li>Biology - A</li>
+                                            <li>Computing - A*</li>
+                                            <li>Geography - A*</li>
+                                            <li>French - A</li>
+                                            <li>Latin - A</li>
+                                            <li>RS - A</li>
+                                        </ul>
+                                        <hr style="margin: 10px 5%; border-top-color: lightgray">
+                                        <ul>
+                                            <li>Silver DofE</li>
+                                            <li>School Computing Prize</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="height: 100%">
+                                <div class="experience_box" style="height: 100%">
+                                    <h1>2012</h1>
+                                    <hr style="margin: 0 5%; border-top-color: lightgray">
+                                    <div class="centre_container">
+                                        <ul>
+                                            <li>Major Academic Scholarship (Oundle School)</li>
+                                            <li>UKMT Junior</li>
+                                            <li>School Maths, RS &amps; History Prizes</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="height: 100%">
+                                <div class="experience_box" style="height: 100%">
+                                    <h1>Other</h1>
+                                    <hr style="margin: 0 5%; border-top-color: lightgray">
+                                    <div class="centre_container">
+                                        <ul>
+                                            <li>Bronze DofE - 2013</li>
+                                            <li>Silver DofE - 2015</li>
+                                            <li>Gold DofE - 2019</li>
+                                            <li>Major Academic Scholarship - 2012-17</li>
+                                            <li>Computing Prize - 2012-17</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="centred_page_subheading">&#8592; Scroll &#8594;</p>
+                    
+                    <!-- END TIMELINE VIEW
+                    </div>
+                    <!-- END QUALIFICATION -->
+                        
+                    <!--EXPERIENCE
+                    <p class="centred_page_heading">Experience</p>
+                    <div style="display: flex">
+                        <div class="experience_box" style="flex:1">
+                            <h1>Barclays Bank</h1>
                             <hr style="margin: 0 5%; border-top-color: lightgray">
-                            <h2>MEng - Year 3</h2>
-                            <h2>WIP (82%)</h2>
+                            <h2>2019</h2>
+                            <h2>Summer Internship</h2>
                             <div class="centre_container">
                                 <ul>
-                                    <li>Statistics 2 - 91%</li>
-                                    <li>Machine Learning - 75%</li>
-                                    <li>Image Processing &amp Computer Vision - 70%</li>
+                                    <li>Ran a project to taxonomise &amp; document the technology landscape for Barclaycard Commercial Payments.</li>
+                                    <li>Organised international panel on "Women in Tech - Role of a Male Ally".</li>
                                 </ul>
                             </div>
-                        </li>
-                        <li class="horizontal_scroll_item">
-                            <h1>2019</h1>
+                        </div>
+                        <div class="experience_box" style="flex:1">
+                            <h1>Gig Economy</h1>
                             <hr style="margin: 0 5%; border-top-color: lightgray">
-                            <h2>MEng - Year 2</h2>
-                            <h2>First (73%)</h2>
+                            <h2>2018-Present</h2>
                             <div class="centre_container">
                                 <ul>
-                                    <li>Statistics 1 - 83%</li>
-                                    <li>Combinatorics - 78%</li>
-                                    <li>Symbols, Patterns &amp Signals - 74%</li>
-                                    <li>Data Structures &amp Algorithms - 73%</li>
-                                    <li>Language Engineering - 70%</li>
-                                    <li>Probability 2 - 70%</li>
-                                    <li>Multivariable Calculus - 59%</li>
-                                </ul>
-                                <hr style="margin: 10px 5%; border-top-color: lightgray">
-                                <ul>
-                                    <li>Gold DofE</li>
+                                    <li>Dog Sitter &amp; Walker with <a class="company_anchor">Rover</a>.</li>
+                                    <li>Cycle Courier with <a class="company_anchor">UberEATs</a> &amp; <a class="company_anchor">Stuart</a>.</li>
+                                    <li>Warehouse worker &amp; Cycle Courier with <a class="company_anchor">8Dol</a>.</li>
                                 </ul>
                             </div>
-                        </li>
-                        <li class="horizontal_scroll_item">
-                            <h1>2018</h1>
-                            <hr style="margin: 0 5%; border-top-color: lightgray">
-                            <h2>MEng - Year 1</h2>
-                            <h2>First (77%)</h2>
-                            <div class="centre_container">
-                                <ul>
-                                    <li>Algorithms - 91%</li>
-                                    <li>Functional Programming - 88%</li>
-                                    <li>Foundations &amp Proof - 84%</li>
-                                    <li>Analysis 1A - 81%</li>
-                                    <li>Intro to Group Theory - 77%</li>
-                                    <li>Imperative Programming - 74%</li>
-                                    <li>Linear Algebra &amp Geometry - 72%</li>
-                                    <li>Calculus 1 - 71%</li>
-                                    <li>OO Programming - 70%</li>
-                                    <li>Probability 1 - 68%</li>
-                                </ul>
-                                <hr style="margin: 10px 5%; border-top-color: lightgray">
-                                <ul>
-                                    <li>CS50 Harvard</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="horizontal_scroll_item">
-                            <h1>2017</h1>
-                            <hr style="margin: 0 5%; border-top-color: lightgray">
-                            <h2>A-Levels</h2>
-                            <h2>3A* 1A</h2>
-                            <div class="centre_container">
-                                <ul>
-                                    <li>Maths. - A*</li>
-                                    <li>Further Maths. - A*</li>
-                                    <li>Pre-U Physics - D2 (A*)</li>
-                                    <li>Computer Science - A</li>
-                                </ul>
-                                <hr style="margin: 10px 5%; border-top-color: lightgray">
-                                <ul>
-                                    <li>UKMT Senior - Gold</li>
-                                    <li>School Computing Prize</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="horizontal_scroll_item">
-                            <h1>2016</h1>
-                            <hr style="margin: 10px 5%; border-top-color: lightgray">
-                            <div class="centre_container">
-                                <ul>
-                                    <li>UKMT Senior - Silver</li>
-                                    <li>Year Computing Prize</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="horizontal_scroll_item">
-                            <h1>2015</h1>
-                            <hr style="margin: 0 5%; border-top-color: lightgray">
-                            <h2>GCSEs</h2>
-                            <h2>6A* 4A</h2>
-                            <hr style="margin: 0 5%; border-top-color: lightgray">
-                            <div class="centre_container">
-                                <ul>
-                                    <li>Maths - A*</li>
-                                    <li>English - A*</li>
-                                    <li>Physics - A*</li>
-                                    <li>Chemistry -A* </li>
-                                    <li>Biology - A</li>
-                                    <li>Computing - A*</li>
-                                    <li>Geography - A*</li>
-                                    <li>French - A</li>
-                                    <li>Latin - A</li>
-                                    <li>RS - A</li>
-                                </ul>
-                                <hr style="margin: 10px 5%; border-top-color: lightgray">
-                                <ul>
-                                    <li>Silver DofE</li>
-                                    <li>School Computing Prize</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="horizontal_scroll_item">
-                            <h1>2012</h1>
-                            <hr style="margin: 0 5%; border-top-color: lightgray">
-                            <div class="centre_container">
-                                <ul>
-                                    <li>Major Academic Scholarship (Oundle School)</li>
-                                    <li>UKMT Junior</li>
-                                    <li>School Maths, RS &amps; History Prizes</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="horizontal_scroll_item">
+                        </div>
+                        <div class="experience_box" style="flex:1">
                             <h1>Other</h1>
                             <hr style="margin: 0 5%; border-top-color: lightgray">
                             <div class="centre_container">
                                 <ul>
-                                    <li>Bronze DofE - 2013</li>
-                                    <li>Silver DofE - 2015</li>
-                                    <li>Gold DofE - 2019</li>
-                                    <li>Major Academic Scholarship - 2012-17</li>
-                                    <li>Computing Prize - 2012-17</li>
+                                    <li>Tutoring GCSE Maths.</li>
+                                    <li>Computer tutoring for children with learning difficulties.</li>
+                                    <li>Helped in local library. Lead creative activities for children.</li>
                                 </ul>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                        END EXPERIENCE -->
+                    <!-- PROJECTS
+                    <div class="environment">
+                        <div class="environment_header">
+                            <p class="centred_page_heading">Projects</p>
+                        </div>
+                        <div id="projects_content">
+                            
+                        </div>
+                        <div id="project_footer">
+                            <ul class="horizontal_scroll_list full no-scrollbar" style="height:50px">
+                                <li class="projects_bar_item"><a class=".anchor_li_fill" onclick="project1();">Fitness</a></li>
+                                <li class="projects_bar_item"><a class=".anchor_li_fill" onclick="project2();">Betting</a></li>
+                                <li class="projects_bar_item"><a class=".anchor_li_fill" onclick="project3();"></a></li>
+                                <li class="projects_bar_item"><a class=".anchor_li_fill" onclick="project4();"></a></li>
+                                <li class="projects_bar_item"><a class=".anchor_li_fill" onclick="project5();"></a></li>
+                            </ul>
+                        </div>
                     </div>
-                -->
-                    
+                    <!-- END PROJECTS -->
                 </div>
             </div>
             <div class="col-sm-2 sidebar">
