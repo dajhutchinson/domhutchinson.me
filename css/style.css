@@ -91,10 +91,36 @@ p.centred_page_subheading, a.centred_page_subheading {
     text-align: center
 }
 
+p.centred_page_subheading, a.centred_page_subheading {
+    font-family: "CollegiateBlack";
+    margin:0px 20px;
+    font-size: 50px;
+    color: lightgray;
+    text-align: center
+}
+
+p.left_page_subheading {
+    font-family: "CollegiateBlack";
+    margin:0px 20px;
+    font-size: 50px;
+    color: lightgray;
+    text-align: left
+}
+
+p.centred_page_sub_subheading {
+    font-family: "CollegiateBlack";
+    margin:0px 20px;
+    font-size: 30px;
+    color: lightgray;
+    text-align: center
+}
+
 a.centred_page_subheading:hover {
     text-decoration: none;
     color:#122314;
 }
+
+
 
 /*
  *  Main Divs
@@ -226,11 +252,11 @@ h1.cover_title {
 }
 
 .about_pic {
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../img/me_sunglasses.PNG");
-    background-size:cover;
+    background-image: url("../img/me_sunglasses.PNG");
+    background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: transparent;
+    background-color: white;
 }
 
 /******************
@@ -365,7 +391,7 @@ h1.cover_title {
     padding: 20px;
 }
 
-a.company_anchor {
+a.emp_anchor {
     font-family: "CollegiateBlack";
     margin:0px;
     color: lightgray;
@@ -392,8 +418,8 @@ a.company_anchor {
 .projects_bar_item {
     height: 100%;
     background-color: #333333;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
 }
 
 #project_footer ul li a {
@@ -404,4 +430,15 @@ a.company_anchor {
     font-size: 40px;
     color: white;
     text-decoration: none;
+}
+
+a.emp_link_anchor {
+    font-family: "CollegiateBlack";
+    margin:0px;
+    color: lightgray;
+    text-decoration: none;
+}
+
+a.emp_link_anchor:hover {
+    color: #122314;
 }
