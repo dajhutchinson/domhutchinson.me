@@ -1,0 +1,77 @@
+body {
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+p:hover {
+    cursor: default
+}
+
+/*-------*
+ * HEADER *
+ *-------*/
+
+.header {
+    width:100%;
+    background-color:black;
+    text-align:center;
+    height: 45px;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.header_options {
+  float: right;
+  font-family: "RalewayBlack";
+}
+
+.header a {
+    float: left;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 35px;
+    margin: 0 10px;
+    line-height: 35px;
+    transition-duration: 1s;
+}
+
+.header a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #214025;
+    transform: scale(1.1);
+}
+
+.header_name {
+    font-family: "CollegiateBlack"
+}
+
+
+/*-------*
+ * FOOTER *
+ *-------*/
+
+.footer {
+    width:100%;
+    background-color:black;
+    text-align:center;
+    height: 65px;
+}
+
+.footer_item {
+    color: gray;
+    font-size: 4vh;
+    padding: 5px 10px;
+    font-size: 35px;
+}
+
+.footer_item:hover {
+    text-decoration: none;
+    color: #214025;
+    cursor: pointer
+}
+
+.footer_details {
+    font-size: 15px;
+}

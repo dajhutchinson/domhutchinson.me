@@ -1,0 +1,50 @@
+body {
+  overflow-y: hidden;
+}
+
+/*---------*
+ * CONTENT *
+ *---------*/
+
+.details_content {
+    height: calc(100vh - 110px);
+    padding: 0px;
+    background-color: #000;
+}
+
+.details_content h1 {
+  margin: 0px;
+  font-family: "CollegiateBlack";
+  color: white;
+}
+
+/*------*
+ * LEFT *
+ *------*/
+
+.details_content_left {
+  height: 100%;
+  width: 100%;
+
+  display: table;
+
+  background-color: #214025;
+  background-size:cover;
+}
+
+.details_content_title {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+ /*-------*
+  * RIGHT *
+  *-------*/
+
+.details_content_right {
+  background-color: #214025;
+  height: 100%
+}
