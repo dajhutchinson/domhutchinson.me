@@ -7,6 +7,7 @@
     background-color: blue;
     background-image: linear-gradient(to bottom right,rgba(0,0,0,0.4),rgba(0,0,0,1)),url("../img/family.JPG");
     background-size:cover;
+    background-position: center top;
     /* background-attachment: fixed; */
     margin:0px;
 }
@@ -33,6 +34,38 @@
 #cover_title p:hover {
     color: #214025;
     transform: scale(1.1);
+}
+
+/*-----*
+ * SVG *
+ *-----*/
+
+.curve {
+  position:absolute;
+  width:100%;
+  height:100px;
+
+  fill:#214025;
+  fill-rule:nonzero;
+}
+
+.arrows {
+  position:absolute;
+  width:100px;
+  height:100px;
+
+  left:0;
+  right:0;
+  margin:auto;
+
+  fill:white;
+
+  transition-duration: .4s;
+}
+
+.arrows:hover {
+  transform:translateY(10px);
+  cursor: pointer;
 }
 
 /*-----------*

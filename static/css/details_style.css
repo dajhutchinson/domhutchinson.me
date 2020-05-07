@@ -41,6 +41,15 @@ body {
   width: 100%;
 }
 
+.details_content_title h1 {
+  transition: transform 1s, color .2s;
+}
+
+.details_content_title h1:hover {
+  color: #214025;
+  transform: scale(1.1);
+}
+
  /*-------*
   * RIGHT *
   *-------*/
