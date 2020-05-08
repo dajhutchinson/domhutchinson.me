@@ -1,10 +1,82 @@
+* {
+  cursor: default;
+  font-family: "RalewayBlack";
+}
+
+*:hover {
+  cursor: default;
+}
+
 body {
     margin: 0px;
     overflow-x: hidden;
 }
 
-p:hover {
-    cursor: default
+/*
+ * LISTS
+ */
+
+ul.no_bullets {
+    list-style:     none;
+}
+
+ul.triangle_bullets {
+    list-style:     none;
+    margin:         0.75em 0;
+    padding:        0 1em;
+}
+
+.triangle_bullets li:before {
+    content:        "";
+    border-color:   transparent #fff;
+    border-style:   solid;
+    border-width:   0.35em 0 0.35em 0.45em;
+    display:        block;
+    height:         0;
+    left:           -1em;
+    position:       relative;
+    top:            0.9em;
+    width:          0;
+}
+
+/*-------*
+ * LINKS *
+ *-------*/
+a.h2_link {
+  font-size: 30px;
+  color: white;
+  transition-duration: .4s;
+}
+
+a.h2_link:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color:#214025;
+}
+
+a.link_icon, a.external_link{
+  color: white;
+  transition-duration: .2s;
+}
+
+.col-sm-4 a.link_icon:hover, .col-sm-4 a.external_link:hover, .col-sm-8 a.external_link:hover {
+  color: #214025;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.external_link > i:hover {
+  cursor: pointer;
+}
+
+.full_div_link {
+  color:black;
+  font-size: 100px;
+}
+
+.full_div_link:hover {
+  color: #214025;
+  cursor: pointer;
 }
 
 /*-------*
@@ -22,7 +94,6 @@ p:hover {
 
 .header_options {
   float: right;
-  font-family: "RalewayBlack";
 }
 
 .header a {
@@ -75,3 +146,27 @@ p:hover {
 .footer_details {
     font-size: 15px;
 }
+
+/*--------------*
+ * POPULAR DIVS *
+ *--------------*/
+
+.vertical_scroll {
+  height: 100%;
+  width:100%;
+
+  overflow-x:hidden;
+  overflow-y: scroll;
+}
+
+/*-------*
+ * TABLE *
+ *-------*/
+
+ th {
+   text-align: left;
+ }
+
+ td {
+   text-align: right;
+ }

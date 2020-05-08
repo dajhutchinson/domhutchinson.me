@@ -7,6 +7,7 @@
 
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/fonts.css') }}">
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/keyframes.css') }}">
 
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/details_style.css') }}">
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/bootstrap/bootstrap.min.css') }}">
@@ -19,6 +20,7 @@
     </head>
 
     <body>
+
         <div class="header">
             <a href="/" class="header_name">Dom Hutchinson</a>
             <div class="header_options">
@@ -27,23 +29,33 @@
                 <a href="projects">Projects</a>
             </div>
         </div>
+
         <div class="details_content">
           <div class="row" style="height:100%;">
+
             <div class="col-sm-6" style="height:100%;padding: 0 5px 0 0;">
-              <div class="details_content_left" style="background-image:linear-gradient(to bottom right,rgba(0,0,0,0.4),rgba(0,0,0,1)),url({{ url_for('static',filename=image_path) }})">
+              <div class="details_content_left" style="background-image:linear-gradient(to right,rgba(0,0,0,0.4),rgba(0,0,0,1)),url({{ url_for('static',filename=image_path) }})">
                 <div class="details_content_title">
                   <h1 class="fitText">{{title}}</h1>
+                  {% if sub_title is defined %}
+                    <h2 class="fitText">{{sub_title}}</h2>
+                  {% endif %}
                 </div>
               </div>
             </div>
+
             <div class="col-sm-6" style="height:100%;padding: 0 0 0 5px;">
               <div class="details_content_right">
-                <h1>Right</h1>
+                {% block content %}
+                {% endblock %}
               </div>
             </div>
+
           </div>
         </div>
+
         <div class="footer">
+
             <div class="footer_links">
                 <a class="fab fa-linkedin footer_item" href="https://www.linkedin.com/in/dom-hutchinson"></a>
                 <a class="fab fa-strava footer_item" href="https://www.strava.com/athletes/1593503"></a>
@@ -51,9 +63,11 @@
                 <a class="fab fa-twitter footer_item" href="https://twitter.com/DAJHutchinson"></a>
                 <a class="fab fa-github footer_item" href="https://github.com/dajhutchinson"></a>
             </div>
+
             <div class="footer_details">
                 <i class="far fa-copyright"></i> Dom Hutchinson 2020
             </div>
         </div>
+
     </body>
 </html>

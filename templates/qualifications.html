@@ -1,0 +1,80 @@
+{% extends "details.html" %}
+
+{% block content %}
+
+<div class="vertical_scroll">
+  <div id="uni" class="details_scroll_item title" style="background-image:linear-gradient(to left,rgba(0,0,0,0.4),rgba(0,0,0,1)),url({{ url_for('static',filename='img/uob_skyview.jpg') }})">
+    <a class="item_title" href="/student">MEng Maths & Computer Science <b>></b></a>
+    <h2>University of Bristol</h2>
+    <h3>2017-21</h3>
+    <div class="row">
+
+      <div class="col-sm-4">
+        <h4>Year Results</h4>
+        <ul class="triangle_bullets">
+          <li>Year 1 - 77%</li>
+          <li>Year 2 - 73%</li>
+          <li>Year 3 - WIP (~81%)</li>
+          <li>Year 4 - TODO</li>
+        </ul>
+      </div>
+
+      <div class="col-sm-8">
+        <h4>Notable Results</h4>
+        <ul class="triangle_bullets">
+          <li>Statistics 2 - 91%</li>
+          <li>Algorithms - 91%</li>
+          <li>Functional Programming - 88%</li>
+          <li>Machine Learning - 75%</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="secondary" class="details_scroll_item" style="background-image:linear-gradient(to left,rgba(0,0,0,0.4),rgba(0,0,0,1)),url({{ url_for('static',filename='img/oundle.jpg') }})">
+    <h1>A-Levels & GCSEs</h1>
+    <h2>Oundle School</h2>
+    <h3>2012-17</h3>
+    <div class="row">
+
+      <div class="col-sm-4">
+        <h4>A-Levels (3A* 1A)</h4>
+        <ul class="triangle_bullets">
+          <li>Maths - A*</li>
+          <li>Further Maths - A*</li>
+          <li>Physics - D2</li>
+          <li>Computing - A</li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4">
+        <h4>GCSEs (7A* 4A)</h4>
+        <ul class="triangle_bullets">
+          <li>A* inc. Maths, English, Chemistry, Physics.</li>
+          <li>A inc. French, Latin.</li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4">
+        <h4>Other</h4>
+        <ul class="triangle_bullets">
+          <li>5x School Computing Prize (2012-2017)</li>
+          <li>Gold - UKMT Maths Challenge (1x Senior, 3x Intermediate, 3x Junior)</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="other" class="details_scroll_item" style="background-image:linear-gradient(to left,rgba(0,0,0,0.4),rgba(0,0,0,1)),url({{ url_for('static',filename='img/pinewood.jpg') }});">
+    <h1>Other</h1>
+    <ul class="triangle_bullets">
+      <li>Major Academic Scholarship - 2012</li>
+      <li>DofE - Gold 2019, Silver 2015, Bronze 2013</li>
+      <li>CS50 - 2018</li>
+    </ul>
+  </div>
+
+</div>
+{% endblock %}

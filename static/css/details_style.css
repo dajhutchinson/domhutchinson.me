@@ -50,11 +50,66 @@ body {
   transform: scale(1.1);
 }
 
+.details_content_title h2 {
+  font-family: "CollegiateBlack";
+  color: white;
+}
+
  /*-------*
   * RIGHT *
   *-------*/
 
 .details_content_right {
-  background-color: #214025;
-  height: 100%
+  background-color: black;
+  height: 100%;
+}
+
+.details_scroll_item {
+  width:100%;
+  min-height: 40%;
+
+  padding: 10px;
+
+  color: white;
+
+  background-color:#214025;
+  background-size:cover;
+  background-position:center center;
+}
+
+.details_scroll_item h2 {
+  margin: 0;
+}
+
+.details_scroll_item h3 {
+  margin: 0;
+}
+
+.details_scroll_item {
+  font-weight: 100;
+  border-bottom: 5px solid black;
+}
+
+.details_scroll_item > a:hover {
+  color: #214025;
+}
+
+a.item_title {
+  margin: 0px;
+  font-family: "CollegiateBlack";
+  color: white;
+  font-size: 36px;
+  transition-duration: .4s;
+}
+
+a.item_title:hover {
+  text-decoration: none;
+  color: #214025;
+  cursor: pointer;
+}
+
+.item_title b:hover {
+  text-decoration: none;
+  color: #214025;
+  cursor: pointer;
 }

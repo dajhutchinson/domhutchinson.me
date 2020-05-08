@@ -6,6 +6,7 @@
         <title>DOM HUTCHINSON</title>
 
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/fonts.css') }}">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/keyframes.css') }}">
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
 
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/cover_style.css') }}">
@@ -35,32 +36,48 @@
         </div>
 
         <div id="directory">
-            <div class="row" style="height:100%;padding: 20px 0 20px 0px; margin: 0px">
-                <div class="col-sm-3 directory_item">
-                    <div class="directory_item_content">
-                        <p class="super_title">Currently</p>
-                        <a class="title" href="/student">MEng Student</a>
-                    </div>
-                </div>
 
-                <div class="col-sm-3 directory_item">
-                    <div class="directory_item_content">
-                        <p class="super_title">Past Experience</p>
-                        <a class="title" href="/intern">Barclaycard Intern</a><br>
-                        <a class="sub_title" href="/experience">Other Experiences</a>
-                    </div>
-                </div>
-                <div class="col-sm-3 directory_item">
-                    <div class="directory_item_content">
-                        <a class="title" href="/qualifications">Qualifications</a>
-                    </div>
-                </div>
-                <div class="col-sm-3 directory_item">
-                    <div class="directory_item_content">
-                        <a class="title" href="/projects">Projects</a>
-                    </div>
-                </div>
+          <div class="row" style="height:100%;padding: 20px 0 20px 0px; margin: 0px">
+
+            <div class="col-sm-12 directory_item">
+              <div class="directory_item_content full_div_link" onclick="var win=window.open('/CV','_blank'); win.focus();">
+                CV
+              </div>
             </div>
+
+          </div>
+
+          <div class="row" style="height:100%;padding: 20px 0 20px 0px; margin: 0px">
+
+            <div class="col-sm-3 directory_item">
+              <div class="directory_item_content">
+                <p class="super_title">Currently</p>
+                <a class="title" href="/student">MEng Student</a><br>
+                <a class="sub_title" href="/qualifications">All Qualifications</a>
+              </div>
+            </div>
+
+            <div class="col-sm-3 directory_item">
+              <div class="directory_item_content">
+                <p class="super_title">Past Experience</p>
+                <a class="title" href="/intern">Barclays Intern</a><br>
+                <a class="sub_title" href="/experience">Other Experiences</a>
+              </div>
+            </div>
+
+            <div class="col-sm-3 directory_item">
+              <div class="directory_item_content">
+                <a class="title" href="/projects">Projects</a>
+              </div>
+            </div>
+
+            <div class="col-sm-3 directory_item">
+              <div class="directory_item_content">
+                <a class="title" href="/motivation">Motivation</a>
+              </div>
+            </div>
+
+          </div>
         </div>
 
         <div class="footer">

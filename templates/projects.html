@@ -1,0 +1,110 @@
+{% extends "details.html" %}
+
+{% block content %}
+<div class="vertical_scroll">
+
+  <div id="BSc" class="details_scroll_item"  style="background-image:linear-gradient(to left,rgba(0,0,0,0.4),rgba(0,0,0,1)),url({{ url_for('static',filename='img/social_network_graph.png') }})">
+    <h1>BSc Thesis</h1>
+    <h2>2020</h2>
+    <h3>Implementing & Evaluating Space Efficient Algorithms for Detecting Large Neighbourhoods in Graph Streams.</h3>
+
+    <div class="row">
+
+      <div class="col-sm-8">
+        <h4>Abstract</h4>
+        The Neighbourhood Detection Problem is a problem in graph theory which tasks one with finding a vertex in the graph which has a certain number of neighbours and to then return a subset of these neighbours. This is a trivial problem to solve in theory, but in practice is hard to solve within a time frame which makes the implementation practical. A major reason for this is that many approaches to solving the problem require a lot of space and so quickly overflow a computer’s RAM, slowing the execution significantly down. This common space inefficiency is becoming increasingly problematic since the move towards Big Data. In this paper I discuss and implement the two algorithms presented in <a class="external_link" href="https://arxiv.org/abs/1911.08832" target="_blank">[1]</a> which offer space efficient solutions for neighbourhood detection for two types of graph stream. During the implementation I discuss and evaluate several methods for improving performance of these algorithms, focusing on space-efficiency in order to maximise the potential size of graphs the implementations are effective on. The final implementation of the proposed algorithm for insertion-only streams proves very promising with it able to find large neighbourhoods in a couple of minutes for a graph with 30 million edges. The algorithm for insertion-deletion streams proves much more difficult to evaluate due to restrictions incurred from the implementation of L0 samplers.
+      </div>
+
+      <div class="col-sm-4">
+        <h4>Links</h4>
+        <ul class="no_bullets">
+          <li><a target="_blank" class="external_link" href="projects/BSc"><i class="far fa-file-pdf" target="_blank" href="projects/BSc"></i> Thesis</a></li>
+          <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/Detecting-Large-Neighbourhoods-in-Graph-Streams"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/Detecting-Large-Neighbourhoods-in-Graph-Streams"></i> Code</a></li>
+          <li><a target="_blank" class="external_link" href="https://arxiv.org/abs/1911.08832"><i class="far fa-file-pdf" target="_blank" href="https://arxiv.org/abs/1911.08832"></i> Original Paper</a></li>
+          <li><a target="_blank" class="external_link" href="http://people.cs.bris.ac.uk/~konrad/"><i class="fas fa-user" target="_blank" href="http://people.cs.bris.ac.uk/~konrad/"></i> Supervisor (Christian Konrad)</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="ONS" class="details_scroll_item" style="background-image:linear-gradient(to left,rgba(0,0,0,0.4),rgba(0,0,0,1)),url({{ url_for('static',filename='img/ONS.png') }})">
+    <h1>Office for National Statistics</h1>
+    <h2>2019-20</h2>
+    <h3>Title</h3>
+
+    <div class="row">
+
+      <div class="col-sm-8">
+        <h4>Summary</h4>
+        I was member of the 2019-20 ONS University Working Group. This involved sessions with memebers of staff an the ONS's Newport. I worked with four other undergrads to produce a report on 'The effect of the depreciation of the pound sterling on the travel and tourism industry' in which I focused on the accomodation chapter. This project was presented to staff at the ONS for which we recived a recommendation for a placement.
+      </div>
+
+      <div class="col-sm-4">
+        <h4>Links</h4>
+        <ul class="no_bullets">
+          <li><a target="_blank" class="external_link" href="projects/ONS/writeUp"><i class="far fa-file-pdf" target="_blank" href="projects/ONS/writeUp"></i> Write Up</a> (Pgs 10-11)</li>
+          <li><a target="_blank" class="external_link" href="projects/ONS/powerPoint"><i class="far fa-file-pdf" target="_blank" href="projects/ONS/powerPoint"></i> Presentation</a> (Slds 27-33)</li>
+          <li><a target="_blank" class="external_link" href="projects/ONS/reference"><i class="far fa-file-pdf" target="_blank" href="projects/ONS/reference"></i> Reference</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="Running" class="details_scroll_item" style="background-image:linear-gradient(to left,rgba(0,0,0,0.4),rgba(0,0,0,1)),url({{ url_for('static',filename='img/derby_infographic.png') }})">
+    <h1>Running</h1>
+    <h3></h3>
+    <div class="row">
+
+      <div class="col-sm-8">
+        <h4>Summary</h4>
+        I began running in October 2018. Throughout this period I have recoreded data for each run, namely GPS & heart rate, which I have been playing around with.
+        I produced an infographic outlining the training I did leading into doing the Derby Half Marathon in 2019, my first half marathon.
+        Currently I am working on some properiaty software to analyse my generated data and I should hopefully have something to present soon.
+      </div>
+
+      <div class="col-sm-4">
+
+        <h4>Personal Bests</h4>
+
+        <table>
+          <tr>
+            <th>1 KM</th>
+            <td>3:56</td>
+            <td><a class="fab fa-strava link_icon" target="_blank" href="https://www.strava.com/activities/3077580430/overview"></a></td>
+          </tr>
+          <tr>
+            <th>5 KM</th>
+            <td>21:15</td>
+            <td><a class="fab fa-strava link_icon" target="_blank" href="https://www.strava.com/activities/3137025759/overview"></a></td>
+          </tr>
+          <tr>
+            <th>10 KM</th>
+            <td>43:59</td>
+            <td><a class="fab fa-strava link_icon" target="_blank" href="https://www.strava.com/activities/2908507844#6168797154"></a></td>
+          </tr>
+          <tr>
+            <th>HM</th>
+            <td>1:35:01</td>
+            <td><a class="fab fa-strava link_icon" target="_blank" href="https://www.strava.com/activities/3184813448#6765001457"></a></td>
+          </tr>
+        </table>
+
+        <h4>Links</h4>
+
+        <ul class="no_bullets">
+          <li><a target="_blank" class="external_link" href="projects/running/derby2019"><i class="far fa-file-pdf" target="_blank" href="projects/running/derby2019"></i> Derby 2019 Infographic</a></li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}
