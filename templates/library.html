@@ -1,0 +1,521 @@
+{% extends "base_template.html" %}
+
+{% block css %}
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/library_style.css') }}">
+  <script src="{{ url_for('static',filename='js/library.js') }}"></script>
+{% endblock %}
+
+{% block header %}
+  <a href="qualifications">Education</a>
+  <a href="experience">Experience</a>
+  <a href="library">Library</a>
+  <a href="projects">Projects</a>
+{% endblock %}
+
+{% block main_content %}
+
+  <div class="row" style="height:100%">
+
+    <div class="col-sm-3" style="height:100%">
+
+      <div style="background-color:blue;height:100%;">
+
+        <div class="vertical_scroll">
+
+          <div id="Year3" class="library_scroll_item">
+            <div class="library_title_item">
+              <h1>Year 3</h1>
+            </div>
+          </div>
+
+          <div id="AA" class="library_scroll_item special_book">
+            <h2>Thesis</h2>
+            <h3>Implementing & Evaluating Space Efficient Algorithms for Detecting Large Neighbourhoods in Graph Streams.</h4>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('BScThesis.pdf');">Paper</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/Detecting-Large-Neighbourhoods-in-Graph-Streams/tree/master/src"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/Detecting-Large-Neighbourhoods-in-Graph-Streams/tree/master/src"></i> Code</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/Detecting-Large-Neighbourhoods-in-Graph-Streams"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/Detecting-Large-Neighbourhoods-in-Graph-Streams"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="AA" class="library_scroll_item">
+            <h2>Advanced Algorithms</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesAA.pdf');">Notes</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/AdvancedAlgorithms"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/AdvancedAlgorithms"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="LP" class="library_scroll_item">
+            <h2>AI with Logic Programming</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesLP.pdf');">Notes</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/ArtificalIntelligenceWithLogicProgramming"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/ArtificalIntelligenceWithLogicProgramming"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="IP" class="library_scroll_item">
+            <h2>Image Processing and Computer Vision</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesIP.pdf');">Notes</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('ReportIP.pdf');">Report</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/ImageProcessingAndComputerVision"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/ImageProcessingAndComputerVision"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="LOG" class="library_scroll_item">
+            <h2>Logic</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesLOG.pdf');">Notes</a></li>
+                  <li><a onclick="library_show_file('ReviewedNotesLOG.pdf');">Reviewed Notes</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/Logic"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/Logic"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="ML" class="library_scroll_item">
+            <h2>Machine Learning</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesML.pdf');">Notes</a></li>
+                  <li><a onclick="library_show_file('ReviewedNotesML.pdf');">Reviewed Notes</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/MachineLearning"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/MachineLearning"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="S2" class="library_scroll_item">
+            <h2>Statistics 2</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesS2.pdf');">Notes</a></li>
+                  <li><a onclick="library_show_file('ReviewedNotesS2.pdf');">Reviewed Notes</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/Statistics2"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/Statistics2"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="TI" class="library_scroll_item">
+            <h2>Theory of Inference</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesTI.pdf');">Notes</a></li>
+                  <li><a onclick="library_show_file('ReviewedNotesTI.pdf');">Reviewed Notes</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/TheoryOfInference"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/TheoryOfInference"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="Year2" class="library_scroll_item">
+            <div class="library_title_item">
+              <h1>Year 2</h1>
+            </div>
+          </div>
+
+          <div id="COM" class="library_scroll_item">
+            <h2>Combinatorics</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesCOM.pdf');">Notes</a></li>
+                  <li><a onclick="library_show_file('ReviewedNotesCOM.pdf');">Reviewed Notes</a></li>
+                  <li><a onclick="library_show_file('ProofsCOM.pdf');">Proof Notes</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="DSA" class="library_scroll_item">
+            <h2>Data Structures & Algorithms</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesDSA.pdf');">Notes</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="LE" class="library_scroll_item">
+            <h2>Language Engineering</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesLE.pdf');">Notes</a></li>
+                  <li><a onclick="library_show_file('ReviewedNotesLE.pdf');">Reviewed Notes</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="MVC" class="library_scroll_item">
+            <h2>Multivariable Calculus</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesmVC.pdf');">Notes</a></li>
+                  <li><a onclick="library_show_file('ApplicationNotesMVC.pdf');">Application Notes</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="P2" class="library_scroll_item">
+            <h2>Probability 2</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesP2.pdf');">Notes</a></li>
+                  <li><a onclick="library_show_file('ReviewedNotesP2.pdf');">Reviewed Notes</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="S1" class="library_scroll_item">
+            <h2>Statistics 1</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesS1.pdf');">Notes</a></li>
+                  <li><a onclick="library_show_file('ReviewedNotesS1.pdf');">Reviewed Notes</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="SPS" class="library_scroll_item">
+            <h2>Symbols, Patterns & Signals</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesSPS.pdf');">Notes</a></li>
+                  <li><a onclick="library_show_file('ReviewedNotesSPS.pdf');">Reviewed Notes</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('ReportSPS.pdf');">Report</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="Year1" class="library_scroll_item">
+            <div class="library_title_item">
+              <h1>Year 1</h1>
+            </div>
+          </div>
+
+          <div id="ALG" class="library_scroll_item">
+            <h2>Algorithms</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesALG.pdf');">Notes</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="A1A" class="library_scroll_item">
+            <h2>Analysis 1A</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesA1A.pdf');">NotesA1A</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="C1" class="library_scroll_item">
+            <h2>Calculus 1</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesC1.pdf');">Notes</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/MathsY1/tree/master/Calculus1"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/MathsY1/tree/master/Calculus1"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="FP" class="library_scroll_item">
+            <h2>Functional Programming</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesFP.pdf');">Notes</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/FunctionalProgramming"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/FunctionalProgramming"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="IProg" class="library_scroll_item">
+            <h2>Imperative Programming</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+              </div>
+
+              <div class="col-sm-4">
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/ImperativeProgramming"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/ImperativeProgramming"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="GT" class="library_scroll_item">
+            <h2>Intro to Group Theory</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesGT.pdf');">Notes</a></li>
+                  <li><a onclick="library_show_file('ApplicationNotesGT.pdf');">Application Notes</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/MathsY1/tree/master/GroupTheory/Notes"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/MathsY1/tree/master/GroupTheory/Notes"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="LAG" class="library_scroll_item">
+            <h2>Linear Algebra & Geometry</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesGT.pdf');">Notes</a></li>
+                  <li><a onclick="library_show_file('ApplicationNotesGT.pdf');">Application Notes</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/MathsY1/tree/master/LinearAlgebraAndGeometry/Notes"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/MathsY1/tree/master/LinearAlgebraAndGeometry/Notes"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="OOP" class="library_scroll_item">
+            <h2>Object-Orientated Programming</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesOO.pdf');">Notes</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/ObjectOrientedProgramming"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/ObjectOrientedProgramming"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="P1" class="library_scroll_item">
+            <h2>Probability 1</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesP1.pdf');">Notes</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-sm-9" style="height:100%">
+
+      <div id="pdf_output">
+
+        <!-- <embed type="application/pdf" width="100%" height="100%"> -->
+
+      </div>
+
+    </div>
+
+  </div>
+{% endblock %}

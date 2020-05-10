@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html', title='Home')
+    return render_template('cover.html', title='Home')
 
 @app.route('/CV')
 def cv():
@@ -16,23 +16,23 @@ def cv():
 
 @app.route('/student')
 def student():
-    return render_template('student.html', title="MEng Maths & Computer Science", image_path="img/clifton_suspension_brige.jpg")
+    return render_template('details/student.html', title="MEng Maths & Computer Science", image_path="img/clifton_suspension_brige.jpg")
 
 @app.route('/intern')
 def intern():
-    return render_template('experience.html', title="Intern", image_path="img/barclays.jpg")
+    return render_template('details/experience.html', title="Intern", image_path="img/barclays.jpg")
 
 @app.route('/qualifications')
 def qual():
-    return render_template('qualifications.html', title="Qualifications", image_path="img/clifton_suspension_brige.jpg")
+    return render_template('details/qualifications.html', title="Qualifications", image_path="img/clifton_suspension_brige.jpg")
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.html', title="Projects", image_path="img/me_sunglasses.jpg")
+    return render_template('details/projects.html', title="Projects", image_path="img/me_sunglasses.jpg")
 
 @app.route('/projects/BSc')
 def projects_bsc():
-    return send_file("static/docs/BScThesis.pdf", attachment_filename="DomHutchinsonBScThesis.pdf")
+    return send_file("static/docs/library/BScThesis.pdf", attachment_filename="DomHutchinsonBScThesis.pdf")
 
 @app.route('/derby2019')
 def derby2019():
@@ -60,8 +60,12 @@ def projects_ons_writeup():
 
 @app.route('/experience')
 def experience():
-    return render_template('experience.html', title="Experience", image_path="img/barclays.jpg")
+    return render_template('details/experience.html', title="Experience", image_path="img/barclays.jpg")
 
 @app.route('/motivation')
 def motivation():
     return "TODO"
+
+@app.route('/library')
+def library():
+    return render_template('library.html')

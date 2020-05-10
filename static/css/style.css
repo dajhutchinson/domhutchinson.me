@@ -1,6 +1,7 @@
 * {
   cursor: default;
   font-family: "RalewayBlack";
+  color: white;
 }
 
 *:hover {
@@ -12,9 +13,25 @@ body {
     overflow-x: hidden;
 }
 
-/*
- * LISTS
- */
+/*---------*
+ * CONTENT *
+ *---------*/
+
+.main_content {
+    height: calc(100vh - 110px);
+    padding: 0px;
+    background-color: #000;
+}
+
+.main_content h1 {
+  margin: 0px;
+  font-family: "CollegiateBlack";
+  color: white;
+}
+
+/*-------*
+ * LISTS *
+ *-------*/
 
 ul.no_bullets {
     list-style:     none;
@@ -22,7 +39,6 @@ ul.no_bullets {
 
 ul.triangle_bullets {
     list-style:     none;
-    margin:         0.75em 0;
     padding:        0 1em;
 }
 
@@ -35,8 +51,13 @@ ul.triangle_bullets {
     height:         0;
     left:           -1em;
     position:       relative;
-    top:            0.9em;
+    top:            .9em;
     width:          0;
+}
+
+.triangle_bullets li {
+  position: relative;
+  top: -0.9em;
 }
 
 /*-------*
@@ -157,6 +178,16 @@ a.link_icon, a.external_link{
 
   overflow-x:hidden;
   overflow-y: scroll;
+}
+
+.vertical_scroll a {
+  color: white
+}
+
+.vertical_scroll a:hover {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
 
 /*-------*

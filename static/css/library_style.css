@@ -1,0 +1,81 @@
+.vertical_scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.vertical_scroll {
+  -ms-overflow-style: none;
+}
+
+.col-sm-4 a.external_link:hover {
+  color: black;
+}
+
+/*-------------*
+ * SCROLL ITEM *
+ *-------------*/
+
+.library_scroll_item {
+  min-height: 15%;
+  width: 100%;
+  display: table;
+
+  margin: 0px;
+  font-family: "CollegiateBlack";
+  color: white;
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../img/book_spine.jpg");
+
+  transition-duration: .4s;
+}
+
+.special_book {
+  background-image: url("../img/book_spine_special.jpg");
+}
+
+.library_scroll_item:hover {
+  background-image: url("../img/book_spine_alt.jpg");
+}
+
+.library_title_item {
+  height: 100%;
+  width: 100%;
+
+  display: table-cell;
+  vertical-align: middle;
+
+  background-color: black;
+}
+
+.library_scroll_item h1, .library_scroll_item h2, .library_scroll_item h3 {
+  text-align: center;
+}
+
+.library_scroll_item h3 {
+  font-size: 16px;
+}
+
+.library_scroll_item ul {
+  margin: 0 0 20px 10px;
+}
+
+.library_scroll_item a {
+  color: white;
+}
+
+.library_scroll_item a:hover {
+  color:black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*
+ * PDF OUTPUT
+ */
+
+#pdf_output {
+  background-color: #525659;
+  width: 100%;
+  height: 100%;
+}
