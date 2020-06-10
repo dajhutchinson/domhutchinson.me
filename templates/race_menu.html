@@ -1,0 +1,47 @@
+{% extends "base_template.html" %}
+
+{% block css %}
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/race_menu.css') }}">
+{% endblock %}
+
+{% block js %}
+  <script src="{{ url_for('static',filename='js/races.js') }}"></script>
+{% endblock %}
+
+{% block header %}
+  <a href="/qualifications">Education</a>
+  <a href="/experience">Experience</a>
+  <a href="/library">Library</a>
+  <a href="/projects">Projects</a>
+  <a href="/races">Races</a>
+{% endblock %}
+
+{% block main_content %}
+
+<div class="row race_overviews" style="margin:0px;">
+  {% for dict in race_details %}
+  <div class="col-sm-4 race_overview_div">
+      <img src="/static/{{ dict['bg'] }}" class="background_medal">
+
+      <div class="overview_details">
+        <div class="overview_details_content">
+          <h3>{{ dict["date"]|safe }}</h3>
+          <h1 class="fitText">{{ dict["name"] }}</h1>
+          {% if "sub_title" in dict %}
+          <h2>{{ dict["sub_title"] }}</h2>
+          {% endif %}
+          <h3>{{ dict["time"] }}</h3>
+
+          <div class="race_options">
+            {% if "link" in dict %}
+            <a href="/races/{{ dict['link'] }}">Review</a>
+            {% endif %}
+            <a target="_blank" href="https://www.strava.com/activities/{{ dict['strava_id'] }}">Strava</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base_template.html" %}
+
+{% block css %}
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/race_review.css') }}">
+{% endblock %}
+
+{% block js %}
+  <!-- -->
+{% endblock %}
+
+{% block header %}
+  <a href="/qualifications">Education</a>
+  <a href="/experience">Experience</a>
+  <a href="/library">Library</a>
+  <a href="/projects">Projects</a>
+  <a href="/races">Races</a>
+{% endblock %}
+
+{% block main_content %}
+
+<div class="row review_content" style="margin:0px;background-color:black;height:100%">
+  <div class="race_titles">
+    <h1 class="fitText">{{ event|safe }}</h1>
+    <h3>{{ year|safe }}</h3>
+  </div>
+  <div class="race_route" style="width:100%">
+    {{ svg|safe }}
+  </div>
+</div>
+
+{% endblock %}

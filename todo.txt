@@ -1,2 +1,8 @@
+!Mobile version
 Interactive analysis of race results.
-dogs?
+ - Activity analysis
+Stock analysis
+Personal Finances
+?dogs
+Link to project git repo
+Caching

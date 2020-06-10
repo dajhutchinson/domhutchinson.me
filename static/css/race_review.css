@@ -1,0 +1,41 @@
+body {
+  overflow: hidden;
+}
+
+.review_content {
+  height:100%;
+  width:100%;
+  margin:0px;
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+
+.race_titles {
+  text-align: center
+}
+
+
+/*
+ *  SVG file
+ */
+
+svg {
+  display:block;
+  margin: auto
+}
+
+.svg_endpoint_cover {
+  stroke: #000;
+}
+
+.svg_route_animation {
+  stroke-dasharray: 500;
+  stroke: #547358;
+  animation: dash 5s linear infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+}

@@ -1,0 +1,82 @@
+body {
+  overflow: hidden;
+}
+
+/*---------------------*
+ *  RACE OVERVIEW MENU *
+ *---------------------*/
+
+.race_overviews {
+  height:100%;
+  width:100%;
+  margin:0px;
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+
+.race_overview_div {
+  border: 20px solid transparent;
+  z-index: 1;
+}
+
+img.background_medal {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  z-index: -1;
+  filter: drop-shadow(0px 0px 10px rgba(33, 64, 37, 1));
+  transition-duration: 1s;
+}
+
+img.background_medal:hover {
+  filter: drop-shadow(0px 0px 50px rgba(118, 184, 127, 1));
+}
+
+.race_overview_div h1 {
+  pointer-events: all;
+}
+
+.race_overview_div h1:hover {
+  transform: scale(1.2);
+}
+
+.race_overview_div h1, .race_overview_div h2, .race_overview_div h3 {
+  text-align: center;
+  transition-duration: .2s;
+}
+
+.race_options {
+  text-align: center;
+  width: 100%;
+}
+
+.race_options a {
+  color: white;
+  transition-duration: .2s;
+  font-size: 20px;
+  margin: 0 10px;
+  pointer-events: all;
+}
+
+.race_options a:hover {
+  color: #214025;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.overview_details {
+  width: 100%;
+  display: table;
+  height:100%;
+  pointer-events: none;
+}
+
+.overview_details > * {
+  pointer-events: none;
+}
+
+.overview_details_content {
+  display: table-cell;
+  vertical-align: middle;
+}
