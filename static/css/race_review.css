@@ -26,9 +26,10 @@ svg {
 
 .svg_endpoint_cover {
   stroke: #000;
+  stroke-width: 10;
 }
 
-.svg_route_animation {
+.svg_route_animation, .svg_profile_animation {
   stroke-dasharray: 500;
   stroke: #547358;
   animation: dash 5s linear infinite;

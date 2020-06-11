@@ -2,6 +2,7 @@
 # shift + reload = reload and refresh cache
 
 from flask import Flask, render_template, send_file, redirect
+import csv
 
 app = Flask(__name__)
 
@@ -113,10 +114,32 @@ def races():
 
 @app.route('/races/<int:year>/<string:event>')
 def race_review(year,event):
-    f=open("static/img/svg/"+event+"_"+str(year)+"_route.svg")
-    svg=f.read()
     names={"bristol_10k":"Bristol 10k","battlefield_duathlon":"Battlefield Duathlon","derby_hm":"Derby Half Marathon","bristol_hm":"Bristol Half Marathon","liverpool_hm":"Liverpool Half Marathon"}
-    return render_template('race_review.html',year=year,event=names[event] if event in names else event,svg=svg)
+
+    route_svg_file=open("static/img/svg/"+event+"_"+str(year)+"_route.svg")
+    route_svg=route_svg_file.read()
+
+    profile_svg_file=open("static/img/svg/"+event+"_"+str(year)+"_profile.svg")
+    profile_svg=profile_svg_file.read()
+
+    csv_file=open("static/csv/"+event+"_"+str(year)+".csv")
+    csv_reader=csv.reader(csv_file,delimiter=",")
+    csv_data={}
+    for row in csv_reader:
+        if (len(row)>2):
+            csv_data[row[0]]=[map_to_best_type(x) for x in row[1:]]
+            if isinstance(csv_data[row[0]][-1],str) and ")" in csv_data[row[0]][-1]: # merge data for extra in splits
+                csv_data[row[0]][-2]=(map_to_best_type(csv_data[row[0]][-2].strip("()")),map_to_best_type(csv_data[row[0]][-1].rstrip(")")))
+                csv_data[row[0]].pop()
+
+        else:
+            csv_data[row[0]]=map_to_best_type(row[1])
+
+    print(csv_data)
+
+    bests={k:k.rstrip("_best") for k in csv_data if "_best" in k} # dictionary of distances which best splits have been calculated for
+
+    return render_template('race_review.html',year=year,event=names[event] if event in names else event,route_svg=route_svg,profile_svg=profile_svg,data=csv_data,bests=bests)
 
 @app.route('/derby2019')
 def derby2019():
@@ -133,3 +156,12 @@ def motivation():
 @app.route('/library')
 def library():
     return render_template('library.html')
+
+def map_to_best_type(val):
+    try:
+        return int(val)
+    except:
+        try:
+            return float(val)
+        except:
+            return val
