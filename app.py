@@ -125,6 +125,7 @@ def race_review(year,event):
     csv_file=open("static/csv/"+event+"_"+str(year)+".csv")
     csv_reader=csv.reader(csv_file,delimiter=",")
     csv_data={}
+
     for row in csv_reader:
         if (len(row)>2):
             csv_data[row[0]]=[map_to_best_type(x) for x in row[1:]]
@@ -137,9 +138,27 @@ def race_review(year,event):
 
     print(csv_data)
 
+    split_zones_svg_file=open("static/img/svg/"+event+"_"+str(year)+"_split_zones.svg")
+    split_zones_svg=split_zones_svg_file.read()
+
+    hr_zones_svg=None
+    if "heart_rate_avg" in csv_data:
+        hr_zones_svg_file=open("static/img/svg/"+event+"_"+str(year)+"_hr_zones.svg")
+        hr_zones_svg=hr_zones_svg_file.read()
+
     bests={k:k.rstrip("_best") for k in csv_data if "_best" in k} # dictionary of distances which best splits have been calculated for
 
-    return render_template('race_review.html',year=year,event=names[event] if event in names else event,route_svg=route_svg,profile_svg=profile_svg,data=csv_data,bests=bests)
+    medal_path={"bristol_10k":"img/medals/bris10k.png",
+        "derby_hm":"img/medals/derbyHM.png",
+        "bristol_hm":"img/medals/brisHM.png",
+        "liverpool_hm":"img/medals/livHM.png"}
+
+    strava_ids={"brstol_10k":"2343059898",
+        "derby_hm":"2435553983",
+        "bristol_hm":"2710224673",
+        "liverpool_hm":"3184813448"}
+
+    return render_template('race_review.html',year=year,event=names[event] if event in names else event,route_svg=route_svg,profile_svg=profile_svg,data=csv_data,bests=bests,hr_zones_svg=hr_zones_svg,split_zones_svg=split_zones_svg,bg=medal_path[event],strava_id=strava_ids[event])
 
 @app.route('/derby2019')
 def derby2019():

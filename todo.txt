@@ -1,8 +1,13 @@
-!Mobile version
 Interactive analysis of race results.
- - Activity analysis
+ - Finishing positions
+ - HR (animation pulsing at average rate)
+
+COVID-19 analysis
 Stock analysis
 Personal Finances
 ?dogs
 Link to project git repo
-Caching
+General Activity analysis
+
+!Mobile version
+!Caching

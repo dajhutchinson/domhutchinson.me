@@ -3,35 +3,142 @@ body {
 }
 
 .review_content {
-  height:100%;
   width:100%;
   margin:0px;
   overflow-y:scroll;
   overflow-x:hidden;
 }
 
-.race_titles {
+h2 {
   text-align: center
 }
 
+.race_route {
+  height: 80%
+}
+
+.race_profile {
+  height: 20%
+}
 
 /*
- *  SVG file
+ * TITLE ELEMENT
  */
+
+img.background_medal {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  z-index: -1;
+  filter: drop-shadow(0px 0px 10px rgba(33, 64, 37, 1));
+  transition-duration: 1s;
+}
+
+img.background_medal:hover {
+  filter: drop-shadow(0px 0px 50px rgba(118, 184, 127, 1));
+}
+
+.review_title {
+  border: 20px solid transparent;
+  z-index: 1;
+}
+
+.review_title_content_outer {
+  text-align: center;
+  width: 100%;
+  display: table;
+  height:100%;
+  pointer-events: none;
+}
+
+.review_title_content_outer > * {
+  pointer-events: none;
+}
+
+.review_title_content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.review_title_options {
+  text-align: center;
+  width: 100%;
+}
+
+.review_title_options a {
+  color: white;
+  transition-duration: .2s;
+  font-size: 20px;
+  margin: 0 10px;
+  pointer-events: all;
+}
+
+.review_title_options a:hover {
+  color: #214025;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*
+ * ELEVATION
+ */
+
+.gain, .gain:hover {
+  color: red;
+  text-decoration: none
+}
+
+.loss, .loss:hover {
+  color:green;
+  text-decoration: none
+}
+
+/*-------*
+ * TABLE *
+ *-------*/
+
+.review_content th {
+  text-align: right;
+  padding-right: 1em;
+  width: 50%
+}
+
+.review_content td {
+  text-align: left;
+  width: 50%
+}
+
+.blank_row {
+  height: 1em !important;
+}
+
+/*----------*
+ * SVG file *
+ *----------*/
 
 svg {
   display:block;
-  margin: auto
+  margin: auto;
+}
+
+/*-----------------*
+ * ROUTE & PROFILE *
+ *-----------------*/
+
+.svg_route, .svg_profile {
+  stroke-width:15;
+  pointer-events: all!important;
 }
 
 .svg_endpoint_cover {
   stroke: #000;
-  stroke-width: 10;
+  stroke-width: 25;
 }
 
 .svg_route_animation, .svg_profile_animation {
   stroke-dasharray: 500;
   stroke: #547358;
+  stroke-width:15;
   animation: dash 5s linear infinite;
 }
 
@@ -39,4 +146,27 @@ svg {
   from {
     stroke-dashoffset: 1000;
   }
+}
+
+/*------------*
+ * HISTOGRAMS *
+ *------------*/
+
+.hist_bar {
+  pointer-events: all!important;
+  transition: .5s
+}
+
+.hist_bar:hover {
+  animation-timing-function: ease-in;
+  fill: #547358!important;
+  stroke: #214025!important;
+}
+
+text.hist_text {
+  fill: white
+}
+
+line.hist_axis {
+  stroke-width:4!important
 }

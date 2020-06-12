@@ -18,13 +18,87 @@
 
 {% block main_content %}
 
-<div class="row review_content" style="margin:0px;background-color:black;height:100%">
-  <div class="race_titles">
-    <h1 class="fitText">{{ event|safe }}</h1>
-    <h3>{{ year|safe }}</h3>
-  </div>
-  <div class="race_details row" style="width:100%">
-    <div class="col-md-3" style="height:100%">
+<div class="review_content" style="width:100%;height:100%">
+
+  <div class="row review_summary"  style="width:100%;height:40vh">
+
+    <div class="col-md-3 review_title" style="height:100%">
+      <img src="/static/{{ bg }}" class="background_medal">
+
+      <div class="review_title_content_outer">
+        <div class="review_title_content">
+          <h1>{{ event|safe }}</h1>
+          <h3>{{ year|safe }}</h3>
+          <div class="review_title_options">
+            <a href="/races/">Back</a>
+            <a target="_blank" href="https://www.strava.com/activities/{{ strava_id }}">Strava</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3" height=100%>
+      <h2>Summary</h2>
+      <table width=100%>
+        <tr>
+          <th>Sport</th>
+          <td>{{ data["sport"] }}</td>
+        </tr>
+        <tr>
+          <th>Date</th>
+          <td>{{ data["start_time"].split(" ")[0] }}</td>
+        </tr>
+        <tr>
+          <th>Start Time</th>
+          <td>{{ data["start_time"].split(" ")[1] }}</td>
+        </tr>
+        <tr class="blank_row">
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+          <th>Time</th>
+          <td>{% if data["time_total"]>=3600 %}{{ data["time_total"]//3600 }}:{% endif %} {{ (data["time_total"]%3600)//60 }}:{{ '%02d' % (data["time_total"]%60) }}</td>
+        </tr>
+        <tr>
+          <th>Distance</th>
+          <td>{{'%0.1f' % (data["distance_total"]/1000)}}km</td>
+        </tr>
+        <tr>
+          {% set pace_secs = ((1000 * data["time_total"])/data["distance_total"]) | round | int%}
+          <th>Avg. Pace</th>
+          <td>{{ (pace_secs%3600)//60 }}:{{ '%02d' % (pace_secs%60) }} per km</td>
+        </tr>
+        <tr>
+          <th>Elevation Gain</th>
+          <td>{{ data["elevation_gain"] }}m</td>
+        </tr>
+        {% if "heart_rate_avg" in data%}
+          <tr>
+            <th>Avg. Heart Rate</th>
+            <td>{{ data["heart_rate_avg"] }} BPM</td>
+          </tr>
+          <tr>
+            <th>Max. Heart Rate</th>
+            <td>{{ data["heart_rate_max"] }} BPM</td>
+          </tr>
+        {% endif %}
+      </table>
+    </div>
+
+    <div class="col-md-3" style="height:100%;text-align:center">
+      <h2>Best Splits</h2>
+      <table width=100%>
+        {% for key,val in bests.items() %}
+          <tr>
+            <th>{{ val }}</th>
+            <td>{% if data[key]>=3600 %}{{ data[key]//3600 }}:{% endif %} {{ (data[key]%3600)//60 }}:{{ '%02d' % (data[key]%60) }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <div class="col-md-3" height=100%>
+      <h2>Route</h2>
       <div class="race_route">
         {{ route_svg|safe }}
       </div>
@@ -33,39 +107,83 @@
       </div>
     </div>
 
-    <div class="col-md-3" style="height:100%;text-align:center">
-      <h3>Kilometre Splits</h3>
-      {% set c = [] %}
-      {% for split in data["1km_splits"] %}
-        {% if c.append(1) %}{% endif %}
-        {% if split is number %}
-          <p>Km {{ c|length }} - {{ split//60 }}:{{ '%02d' % (split%60) }}</p>
-        {% else %}
-          <p>Km {{ c|length }} - {{ (split.0)//60 }}:{{ '%02d' % ((split.0)%60) }} ({{ '%0.2f' % ((split.1)/1000) }} km)</p>
-        {% endif %}
-      {% endfor %}
-    </div>
-
-    <div class="col-md-3" style="height:100%;text-align:center">
-      <h3>Mile Splits</h3>
-      {% set c = [] %}
-      {% for split in data["1mi_splits"] %}
-        {% if c.append(1) %}{% endif %}
-        {% if split is number %}
-          <p>Mile {{ c|length }} - {{ split//60 }}:{{ '%02d' % (split%60) }}</p>
-        {% else %}
-          <p>Mile {{ c|length }} - {{ (split.0)//60 }}:{{ '%02d' % ((split.0)%60) }} ({{ '%0.2f' % ((split.1)/1609) }} mi)</p>
-        {% endif %}
-      {% endfor %}
-    </div>
-
-    <div class="col-md-3" style="height:100%;text-align:center">
-      <h3>Best Splits</h3>
-      {% for key,val in bests.items() %}
-        <p><b>{{ val }}</b> - {{ data[key]//60 }}:{{ '%02d' % (data[key]%60) }}</p>
-      {% endfor %}
-    </div>
   </div>
+
+  <div class="row race_details" style="width:100%;height:40vh">
+
+    <div class="col-md-3" style="height:100%;text-align:center">
+      <h2>Kilometre Splits</h2>
+      <table width=100%>
+        {% for i in range(data["1km_splits"]|length) %}
+          <tr>
+          {% set split=data["1km_splits"][i] %}
+          {% if split is number %}
+            <th>Km {{ i+1 }}</th><td>{{ split//60 }}:{{ '%02d' % (split%60) }}
+              {% if data["1km_elevation_splits"][i] >0 %}
+                <a class="gain">(+{{data["1km_elevation_splits"][i]}}m)</a>
+              {% elif data["1km_elevation_splits"][i] <0 %}
+                <a class="loss">({{data["1km_elevation_splits"][i]}}m)</a>
+              {% endif %}
+              </td>
+          {% else %}
+            <th>Km {{ i+1 }}</th><td>{{ (split.0)//60 }}:{{ '%02d' % ((split.0)%60) }} ({{ '%0.2f' % ((split.1)/1000) }} km)
+              {% if data["1km_elevation_splits"][i].0 >0 %}
+                <a class="gain">(+{{data["1km_elevation_splits"][i].0}}m)</a>
+              {% elif data["1km_elevation_splits"][i] <0 %}
+                <a class="loss">({{data["1km_elevation_splits"][i].0}}m)</a>
+              {% endif %}
+              </td>
+          {% endif %}
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <div class="col-md-3" style="height:100%;text-align:center">
+      <h2>Mile Splits</h2>
+      <table width=100%>
+        {% for i in range(data["1mi_splits"]|length) %}
+        <tr>
+            {% set split=data["1mi_splits"][i] %}
+            {% if split is number %}
+              <th>Mile {{ i+1 }}</th> <td>{{ split//60 }}:{{ '%02d' % (split%60) }}
+              {% if data["1mi_elevation_splits"][i] >0 %}
+                <a class="gain">(+{{data["1mi_elevation_splits"][i]}}m)</a>
+              {% elif data["1mi_elevation_splits"][i] <0 %}
+                <a class="loss">({{data["1mi_elevation_splits"][i]}}m)</a>
+              {% endif %}
+            {% else %}
+              <th>Mile {{ i+1 }}</th> <td>{{ (split.0)//60 }}:{{ '%02d' % ((split.0)%60) }} ({{ '%0.2f' % ((split.1)/1609) }} mi)
+              {% if data["1mi_elevation_splits"][i].0 >0 %}
+                <a class="gain">(+{{data["1mi_elevation_splits"][i].0}}m)</a>
+              {% elif data["1mi_elevation_splits"][i].0 <0 %}
+                <a class="loss">({{data["1mi_elevation_splits"][i].0}}m)</a>
+              {% endif %}
+            {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <div class="col-md-3" height=100%>
+      <h2>Splits</h2>
+      <div class="split_zones">
+        {{ split_zones_svg|safe }}
+      </div>
+    </div>
+
+    <div class="col-md-3" height=100%>
+      {% if hr_zones_svg %}
+        <h2>Heart Rate</h2>
+        <div class="hr_zones">
+          {{ hr_zones_svg|safe }}
+        </div>
+      {% endif %}
+    </div>
+
+  </div>
+
 </div>
 
 {% endblock %}
