@@ -2,12 +2,23 @@
 # shift + reload = reload and refresh cache
 
 from flask import Flask, render_template, send_file, redirect
+from flask_caching import Cache
 import csv
 
+# cache config
+config = {
+    "DEBUG": True,          # some Flask specific configs
+    "CACHE_TYPE": "simple", # Flask-Caching related configs
+    "CACHE_DEFAULT_TIMEOUT": 300
+}
+
 app = Flask(__name__)
+app.config.from_mapping(config)
+cache = Cache(app)
 
 @app.route('/')
 @app.route('/index')
+@cache.cached(timeout=600)
 def index():
     return render_template('cover.html', title='Home')
 
@@ -16,12 +27,17 @@ PROJECTS
 """
 
 @app.route('/projects')
+@cache.cached(timeout=600)
 def projects():
     return render_template('details/projects.html', title="Projects", image_path="img/me_sunglasses.jpg")
 
 @app.route('/projects/BSc')
 def projects_bsc():
     return send_file("static/docs/library/BScThesis.pdf", attachment_filename="DomHutchinsonBScThesis.pdf")
+
+@app.route('/projects/MEng')
+def projects_meng():
+    return send_file("static/docs/library/MEngThesis.pdf", attachment_filename="DomHutchinsonMEngThesis.pdf")
 
 @app.route('/projects/running/derby2019')
 def projects_derby():
@@ -48,22 +64,27 @@ PROFESSIONAL
 """
 
 @app.route('/experience')
+@cache.cached(timeout=600)
 def experience():
     return render_template('details/experience.html', title="Experience", image_path="img/barclays.jpg")
 
+@app.route('/cv')
 @app.route('/CV')
 def cv():
     return send_file("static/docs/CVTechnical.pdf", attachment_filename="DomHutchinsonCV.pdf")
 
 @app.route('/student')
+@cache.cached(timeout=600)
 def student():
     return render_template('details/student.html', title="MEng Maths & Computer Science", image_path="img/clifton_suspension_brige.jpg")
 
 @app.route('/intern')
+@cache.cached(timeout=600)
 def intern():
     return render_template('details/experience.html', title="Intern", image_path="img/barclays.jpg")
 
 @app.route('/qualifications')
+@cache.cached(timeout=600)
 def qual():
     return render_template('details/qualifications.html', title="Qualifications", image_path="img/clifton_suspension_brige.jpg")
 
@@ -72,6 +93,7 @@ RACE
 """
 
 @app.route('/races/')
+@cache.cached(timeout=600)
 def races():
     race_details=[{
         "name":"Battlefield Duathlon",
@@ -146,14 +168,14 @@ def race_review(year,event):
         hr_zones_svg_file=open("static/img/svg/"+event+"_"+str(year)+"_hr_zones.svg")
         hr_zones_svg=hr_zones_svg_file.read()
 
-    bests={k:k.rstrip("_best") for k in csv_data if "_best" in k} # dictionary of distances which best splits have been calculated for
+    bests={k:k.rstrip("_best") for k in csv_data if "_best" in k}# dictionary of distances which best splits have been calculated for
 
     medal_path={"bristol_10k":"img/medals/bris10k.png",
         "derby_hm":"img/medals/derbyHM.png",
         "bristol_hm":"img/medals/brisHM.png",
         "liverpool_hm":"img/medals/livHM.png"}
 
-    strava_ids={"brstol_10k":"2343059898",
+    strava_ids={"bristol_10k":"2343059898",
         "derby_hm":"2435553983",
         "bristol_hm":"2710224673",
         "liverpool_hm":"3184813448"}
@@ -173,6 +195,7 @@ def motivation():
     return "TODO"
 
 @app.route('/library')
+@cache.cached(timeout=600)
 def library():
     return render_template('library.html')
 

@@ -7,8 +7,8 @@
 
 {% block header %}
   <a href="/qualifications">Education</a>
-  <a href="/experience">Experience</a>
   <a href="/library">Library</a>
+  <a href="/experience">Experience</a>
   <a href="/projects">Projects</a>
   <a href="/races">Races</a>
 {% endblock %}
@@ -23,14 +23,166 @@
 
         <div class="vertical_scroll">
 
+          <div id="Year4" class="library_scroll_item">
+            <div class="library_title_item">
+              <h1>Year 4</h1>
+            </div>
+          </div>
+
+          <div id="MEng" class="library_scroll_item special_book">
+            <h2>Master's Thesis</h2>
+            <h3>Bayesian Modelling of Epidemic Processes.</h3>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('MEngThesis.pdf');">Paper</a></li>
+                  <li><a onclick="library_show_file('MEngPoster.pdf');">Poster</a></li>
+                  <li><a onclick="library_show_file('MEngPresentation.pdf');">Presentation</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/Bayesian-Modelling-of-Epidemic-Processes/tree/main/Code"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/Bayesian-Modelling-of-Epidemic-Processes/tree/main/Code"></i> Code</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/Bayesian-Modelling-of-Epidemic-Processes"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/Bayesian-Modelling-of-Epidemic-Processes"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="ADS" class="library_scroll_item">
+            <h2>Applied Data Science</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesADS.pdf');">Notes</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a onclick="library_show_file('ReportADS.pdf');">Report</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/Applied-Data-Science/"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/Applied-Data-Science/"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="ADL" class="library_scroll_item">
+            <h2>Applied Deep Learning</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesADL.pdf');">Notes</a></li>
+                  <li><a onclick="library_show_file('ReviewedNotesADL.pdf');">Reviewed Notes</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/Applied-Deep-Learning/"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/Applied-Deep-Learning/"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="FM" class="library_scroll_item">
+            <h2>Financial Mathematics</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesFM.pdf');">Notes</a></li>
+                  <li><a onclick="library_show_file('ReviewedNotesFM.pdf');">Reviewed Notes</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/Financial-Mathematics/"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/Financial-Mathematics/"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="IEFT" class="library_scroll_item">
+            <h2>Internet Economics & Financial Technology</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesIE.pdf');">Notes</a></li>
+                  <li><a onclick="library_show_file('ReviewedNotesIE.pdf');">Reviewed Notes</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/Internet-Economics-and-Financial-Technology/"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/Internet-Economics-and-Financial-Technology/"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="SO" class="library_scroll_item">
+            <h2>Stochastic Optimisation</h2>
+            <div class="row">
+
+              <div class="col-sm-4">
+                <ul class="triangle_bullets">
+                  <li><a onclick="library_show_file('NotesSO.pdf');">Notes</a></li>
+                  <li><a onclick="library_show_file('ReviewedNotesSO.pdf');">Reviewed Notes</a></li>
+                  <li><a onclick="library_show_file('ApplicationNotesSO.pdf');">Application Notes</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-4">
+              </div>
+
+              <div class="col-sm-4">
+                <ul class="no_bullets">
+                  <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/Stochastic-Optimisation/"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/Stochastic-Optimisation/"></i> GitRepo</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
           <div id="Year3" class="library_scroll_item">
             <div class="library_title_item">
               <h1>Year 3</h1>
             </div>
           </div>
 
-          <div id="AA" class="library_scroll_item special_book">
-            <h2>Thesis</h2>
+          <div id="BSc" class="library_scroll_item special_book">
+            <h2>Bachelor's Thesis</h2>
             <h3>Implementing & Evaluating Space Efficient Algorithms for Detecting Large Neighbourhoods in Graph Streams.</h3>
             <div class="row">
 

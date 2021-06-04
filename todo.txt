@@ -1,6 +1,7 @@
 Interactive analysis of race results.
  - Finishing positions
  - HR (animation pulsing at average rate)
+ - Progress of PBs (with what distance was being targetted)
 
 COVID-19 analysis
 Stock analysis

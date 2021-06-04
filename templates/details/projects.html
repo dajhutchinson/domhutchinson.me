@@ -3,8 +3,34 @@
 {% block content %}
 <div class="vertical_scroll">
 
-  <div id="BSc" class="details_scroll_item"  style="background-image:linear-gradient(to left,rgba(0,0,0,0.4),rgba(0,0,0,1)),url({{ url_for('static',filename='img/social_network_graph.png') }})">
-    <h1>BSc Thesis</h1>
+  <div id="MEng" class="details_scroll_item"  style="background-image:linear-gradient(to left,rgba(0,0,0,0.2),rgba(0,0,0,0.4),rgba(0,0,0,1)),url({{ url_for('static',filename='img/senegal_covid_ci.png') }})">
+    <h1>Master's Thesis</h1>
+    <h2>2021</h2>
+    <h3>Bayesian Modelling of Epidemic Processes.</h3>
+
+    <div class="row">
+
+      <div class="col-sm-8">
+        <h4>Abstract</h4>
+        Approximate Bayesian Computation (ABC) methods are a family of likelihood-free methods for estimating the posterior of model parameters. These methods have many features which users need to specify for each problem the methods are used on, and on which the success of these methods rests. In this project, I explore methods for automating the selection of one of these features: summary statistics. I provide an analysis of what creates a desirable summary statistic and discuss methods to automate their selection. Two types of selection method are discussed: those which choose an optimal set of statistics from a larger set of handcrafted statistics; and, those which generate their own summary statistics. I implement these methods and evaluate their ability to fit SIR models to data from the early stages of the SARS-CoV-19 (Covid-19) outbreaks in both France and Senegal, with results showing that these selection methods are able to select summary statistics which, when paired with an ABC method, are able to produce better fitting models than the na&#239;vely optimal identity function.
+      </div>
+
+      <div class="col-sm-4">
+        <h4>Links</h4>
+        <ul class="no_bullets">
+          <li><a target="_blank" class="external_link" href="projects/MEng"><i class="far fa-file-pdf" target="_blank" href="projects/MEng"></i> Paper</a></li>
+          <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/Bayesian-Modelling-of-Epidemic-Processes"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/Bayesian-Modelling-of-Epidemic-Processes"></i> Code</a></li>
+          <li><a target="_blank" class="external_link" href="https://people.maths.bris.ac.uk/~madjl/"><i class="fas fa-user" target="_blank" href="https://people.maths.bris.ac.uk/~madjl/"></i> Supervisor (Dan Lawson)</a></li>
+          <li><a target="_blank" class="external_link" href="https://www.bristolmathsresearch.org/staff-profile/dr-sam-tickle/"><i class="fas fa-user" target="_blank" href="https://www.bristolmathsresearch.org/staff-profile/dr-sam-tickle/"></i> Supervisor (Sam Tickle)</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="BSc" class="details_scroll_item"  style="background-image:linear-gradient(to left,rgba(0,0,0,0.2),rgba(0,0,0,0.4),rgba(0,0,0,1)),url({{ url_for('static',filename='img/social_network_graph.png') }})">
+    <h1>Bachelor's Thesis</h1>
     <h2>2020</h2>
     <h3>Implementing & Evaluating Space Efficient Algorithms for Detecting Large Neighbourhoods in Graph Streams.</h3>
 
@@ -18,7 +44,7 @@
       <div class="col-sm-4">
         <h4>Links</h4>
         <ul class="no_bullets">
-          <li><a target="_blank" class="external_link" href="projects/BSc"><i class="far fa-file-pdf" target="_blank" href="projects/BSc"></i> Thesis</a></li>
+          <li><a target="_blank" class="external_link" href="projects/BSc"><i class="far fa-file-pdf" target="_blank" href="projects/BSc"></i> Paper</a></li>
           <li><a target="_blank" class="external_link" href="https://github.com/dajhutchinson/Detecting-Large-Neighbourhoods-in-Graph-Streams"><i class="fab fa-github" target="_blank" href="https://github.com/dajhutchinson/Detecting-Large-Neighbourhoods-in-Graph-Streams"></i> Code</a></li>
           <li><a target="_blank" class="external_link" href="https://arxiv.org/abs/1911.08832"><i class="far fa-file-pdf" target="_blank" href="https://arxiv.org/abs/1911.08832"></i> Original Paper</a></li>
           <li><a target="_blank" class="external_link" href="http://people.cs.bris.ac.uk/~konrad/"><i class="fas fa-user" target="_blank" href="http://people.cs.bris.ac.uk/~konrad/"></i> Supervisor (Christian Konrad)</a></li>
@@ -29,7 +55,7 @@
 
   </div>
 
-  <div id="ONS" class="details_scroll_item" style="background-image:linear-gradient(to left,rgba(0,0,0,0.4),rgba(0,0,0,1)),url({{ url_for('static',filename='img/ONS.png') }})">
+  <div id="ONS" class="details_scroll_item" style="background-image:linear-gradient(to left,rgba(0,0,0,0.2),rgba(0,0,0,0.4),rgba(0,0,0,1)),url({{ url_for('static',filename='img/ONS.png') }})">
     <h1>Office for National Statistics</h1>
     <h2>2019-20</h2>
     <h3>Title</h3>
@@ -54,7 +80,7 @@
 
   </div>
 
-  <div id="Running" class="details_scroll_item" style="background-image:linear-gradient(to left,rgba(0,0,0,0.4),rgba(0,0,0,1)),url({{ url_for('static',filename='img/derby_infographic.png') }})">
+  <div id="Running" class="details_scroll_item" style="background-image:linear-gradient(to left,rgba(0,0,0,0.2),rgba(0,0,0,0.4),rgba(0,0,0,1)),url({{ url_for('static',filename='img/derby_infographic.png') }})">
     <h1>Running</h1>
     <h3></h3>
     <div class="row">
