@@ -100,6 +100,12 @@ a.link_icon, a.external_link{
   cursor: pointer;
 }
 
+a.external_link:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #214025;
+}
+
 /*-------*
  * HEADER *
  *-------*/
@@ -186,7 +192,7 @@ a.link_icon, a.external_link{
 
 .vertical_scroll a:hover {
   text-decoration: none;
-  color: #ddd;
+  color: #214025;
   cursor: pointer;
 }
 

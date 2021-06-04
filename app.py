@@ -29,7 +29,7 @@ PROJECTS
 @app.route('/projects')
 @cache.cached(timeout=600)
 def projects():
-    return render_template('details/projects.html', title="Projects", image_path="img/me_sunglasses.jpg")
+    return render_template('details/projects.html', title="Projects", image_path="img/dom_raff_sun.png")
 
 @app.route('/projects/BSc')
 def projects_bsc():
