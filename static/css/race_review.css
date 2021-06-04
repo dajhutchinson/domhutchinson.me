@@ -66,7 +66,7 @@ img.background_medal:hover {
 }
 
 .review_title_options a {
-  color: white;
+  color: #ddd;
   transition-duration: .2s;
   font-size: 20px;
   margin: 0 10px;
@@ -164,7 +164,7 @@ svg {
 }
 
 text.hist_text {
-  fill: white
+  fill: #ddd
 }
 
 line.hist_axis {

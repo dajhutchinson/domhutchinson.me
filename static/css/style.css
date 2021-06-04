@@ -1,7 +1,7 @@
 * {
   cursor: default;
   font-family: "RalewayBlack";
-  color: white;
+  color: #ddd;
 }
 
 *:hover {
@@ -26,7 +26,7 @@ body {
 .main_content h1 {
   margin: 0px;
   font-family: "CollegiateBlack";
-  color: white;
+  color: #ddd;
 }
 
 /*-------*
@@ -65,7 +65,7 @@ ul.triangle_bullets {
  *-------*/
 a.h2_link {
   font-size: 30px;
-  color: white;
+  color: #ddd;
   transition-duration: .4s;
 }
 
@@ -76,7 +76,7 @@ a.h2_link:hover {
 }
 
 a.link_icon, a.external_link{
-  color: white;
+  color: #ddd;
   transition-duration: .2s;
 }
 
@@ -119,7 +119,7 @@ a.link_icon, a.external_link{
 
 .header a {
     float: left;
-    color: white;
+    color: #eee;
     text-align: center;
     text-decoration: none;
     font-size: 35px;
@@ -181,12 +181,12 @@ a.link_icon, a.external_link{
 }
 
 .vertical_scroll a {
-  color: white
+  color: #ddd
 }
 
 .vertical_scroll a:hover {
   text-decoration: none;
-  color: white;
+  color: #ddd;
   cursor: pointer;
 }
 

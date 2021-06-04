@@ -51,7 +51,7 @@ img.background_medal:hover {
 }
 
 .race_options a {
-  color: white;
+  color: #ddd;
   transition-duration: .2s;
   font-size: 20px;
   margin: 0 10px;

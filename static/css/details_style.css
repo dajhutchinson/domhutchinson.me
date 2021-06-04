@@ -36,7 +36,7 @@ body {
 
 .details_content_title h2 {
   font-family: "CollegiateBlack";
-  color: white;
+  color: #ddd;
 }
 
  /*-------*
@@ -54,7 +54,7 @@ body {
 
   padding: 10px;
 
-  color: white;
+  color: #ddd;
 
   background-color:#214025;
   background-size:cover;
@@ -81,7 +81,7 @@ body {
 a.item_title {
   margin: 0px;
   font-family: "CollegiateBlack";
-  color: white;
+  color: #ddd;
   font-size: 36px;
   transition-duration: .4s;
 }
