@@ -1,5 +1,5 @@
 :root {
-  --arrow-size: 200px
+  --curve-size: 200px
 }
 
 /*-------*
@@ -17,7 +17,7 @@
 }
 
 #cover_title {
-    height:calc(100% - var(--arrow-size));
+    height:calc(100% - var(--curve-size));
     width:100%;
     padding-top: 35vh;
     text-align: center;
@@ -47,28 +47,14 @@
 .curve {
   position:absolute;
   width:100%;
-  height:200px;
+  height:var(--curve-size);
 
   fill:#214025;
   fill-rule:nonzero;
 }
 
 .arrows {
-  position:absolute;
-  width:var(--arrow-size);
-  height:var(--arrow-size);
-
-  left:0;
-  right:0;
-  margin:auto;
-
-  fill:#ddd;
-}
-
-.arrows:hover {
-  animation-timing-function: ease-in;
-  animation: bounce 1.5s infinite;
-  cursor: pointer;
+  display: none;
 }
 
 /*-----------*
