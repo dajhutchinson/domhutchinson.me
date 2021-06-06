@@ -186,6 +186,9 @@ def race_review(year,event):
 def derby2019():
     return send_file("static/img/derby_infographic.png", attachment_filename="DomHutchinsonDerbyInfographic.png")
 
+@app.route('/liverpool2020')
+def liverpool2020():
+    return send_file("static/img/liverpool_hm_elevation.png", attachment_filename="DomHutchinsonLiverpoolInfographic.png")
 """
 MISC
 """
