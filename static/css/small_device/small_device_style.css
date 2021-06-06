@@ -1,0 +1,11 @@
+.header {
+  display: none
+}
+
+.footer {
+  display: none
+}
+
+.main_content {
+    height: 100vh;
+}
