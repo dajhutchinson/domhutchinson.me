@@ -9,3 +9,7 @@
 .main_content {
     height: 100vh;
 }
+
+html:before, html:after {
+  background-color: #000;
+}
