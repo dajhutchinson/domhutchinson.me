@@ -1,3 +1,8 @@
+:root {
+  --dark-green: #214025;
+  --light-green: #34623F;
+}
+
 * {
   cursor: default;
   font-family: "RalewayBlack";
@@ -117,6 +122,10 @@ a.external_link:hover {
 /*-------*
  * HEADER *
  *-------*/
+
+.mobile_nav_scroll {
+  display: none
+}
 
 .header {
     width:100%;

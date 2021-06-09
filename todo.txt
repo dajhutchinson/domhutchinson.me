@@ -1,3 +1,5 @@
+Navigation for mobile version
+
 Interactive analysis of race results.
  - Finishing positions
  - HR (animation pulsing at average rate)
@@ -10,5 +12,4 @@ Personal Finances
 Link to project git repo
 General Activity analysis
 
-!Mobile version
 !Caching
