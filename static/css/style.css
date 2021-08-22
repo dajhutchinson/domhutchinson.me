@@ -9,6 +9,8 @@
    --body-font-weight: 600;
    --font-colour-white: #ddd;
    --font-colour-black: #000;
+   --dark-green: #214025;
+   --light-green: #34623F;
  }
 
 * {
@@ -25,6 +27,14 @@
 body {
     margin: 0px;
     overflow-x: hidden;
+}
+
+.col-sm-6 {
+  height: 100%;
+}
+
+.row {
+  height:100%;
 }
 
 /*---------*
@@ -124,6 +134,10 @@ a.external_link:hover {
 /*-------*
  * HEADER *
  *-------*/
+
+.mobile_nav_scroll {
+  display: none
+}
 
 .header {
     width:100%;

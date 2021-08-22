@@ -5,12 +5,14 @@
         <meta charset="utf-8">
         <title>DOM HUTCHINSON</title>
 
-        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/fonts.css') }}">
-        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/keyframes.css') }}">
-        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/fonts.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/keyframes.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
 
-        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/cover_style.css') }}">
-        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/bootstrap/bootstrap.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/cover_style.css') }}" media="only screen and (min-device-width: 480px)">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap/bootstrap.min.css') }}">
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/small_device/small_device_cover_style.css') }}" media="only screen and (max-device-width: 480px)">
 
         <script src="https://kit.fontawesome.com/5a3a6d8816.js" crossorigin="anonymous"></script>
 
@@ -37,17 +39,17 @@
 
         <div id="directory">
 
-          <div class="row" style="height:100%;padding: 20px 0 20px 0px; margin: 0px">
+          <div class="row" style="height:100%; margin: 0px">
 
             <div class="col-sm-12 directory_item">
               <div class="directory_item_content full_div_link" onclick="var win=window.open('/CV','_blank'); win.focus();">
-                CV
+                <p class="big_title">CV</p>
               </div>
             </div>
 
           </div>
 
-          <div class="row" style="height:100%;padding: 20px 0 20px 0px; margin: 0px">
+          <div class="row" style="height:100%; margin: 0px">
 
             <div class="col-sm-3 directory_item">
               <div class="directory_item_content full_div_link" onclick="location.href='/student';">
@@ -79,11 +81,11 @@
 
         <div class="footer">
             <div class="footer_links">
-                <a class="fab fa-linkedin footer_item" href="https://www.linkedin.com/in/dom-hutchinson"></a>
-                <a class="fab fa-strava footer_item" href="https://www.strava.com/athletes/1593503"></a>
-                <a class="fas fa-envelope footer_item" href="mailto:dom@domhutchinson.me"></a>
-                <a class="fab fa-twitter footer_item" href="https://twitter.com/DAJHutchinson"></a>
-                <a class="fab fa-github footer_item" href="https://github.com/dajhutchinson"></a>
+                <a class="fab fa-linkedin footer_item" href="https://www.linkedin.com/in/dom-hutchinson" target="_blank"></a>
+                <a class="fab fa-strava footer_item" href="https://www.strava.com/athletes/1593503" target="_blank"></a>
+                <a class="fas fa-envelope footer_item" href="mailto:dom@domhutchinson.me" target="_blank"></a>
+                <a class="fab fa-twitter footer_item" href="https://twitter.com/DAJHutchinson" target="_blank"></a>
+                <a class="fab fa-github footer_item" href="https://github.com/dajhutchinson" target="_blank"></a>
             </div>
             <div class="footer_details">
                 <i class="far fa-copyright"></i> Dom Hutchinson 2020

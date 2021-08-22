@@ -1,0 +1,62 @@
+.race_overview_div {
+  background-color: #000;
+}
+
+.col-sm-4 {
+  width: 100%;
+}
+
+.overview_details {
+  width: 100%;
+  display: table;
+  height:100%;
+  pointer-events: none;
+  text-align: center;
+  z-index: -1;
+}
+
+.overview_details > * {
+  pointer-events: none;
+}
+
+.overview_details_content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.race_overview_div {
+  padding: 0;
+  border: 20px solid transparent;
+  z-index: 1;
+}
+
+.overview_details_content h3, .overview_details_content h2 {
+  font-size: 50px;
+}
+
+.race_options a {
+  display: block;
+  pointer-events: all;
+  font-size: 60px;
+  color: #ddd;
+}
+
+.race_options a:hover {
+  color: #214025;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img.background_medal {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  filter: drop-shadow(0px 0px 50px rgba(118, 184, 127, 1));
+  margin: 5%;
+  z-index: 0;
+}
+
+.overview_details h1, .overview_details h2, .overview_details h3, .overview_details a {
+  position: relative;
+  z-index: 1
+}

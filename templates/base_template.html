@@ -6,19 +6,24 @@
         <title>DOM HUTCHINSON</title>
 
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/fonts.css') }}">
-        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/small_device/small_device_style.css') }}" media="only screen and (max-device-width: 480px)">
+
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/keyframes.css') }}">
+
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/bootstrap/bootstrap.min.css') }}">
+
         {% block css %}
 
         {% endblock %}
 
-        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/bootstrap/bootstrap.min.css') }}">
 
         <script src="https://kit.fontawesome.com/5a3a6d8816.js" crossorigin="anonymous"></script>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <script src="{{ url_for('static',filename='js/jquery.fittext.js') }}"></script>
         <script src="{{ url_for('static',filename='js/fit.js') }}"></script>
+        <script src="{{ url_for('static',filename='js/nav.js') }}"></script>
 
         {% block js %}
 
@@ -37,19 +42,60 @@
         </div>
 
         <div class="main_content">
+
           {% block main_content %}
 
           {% endblock %}
         </div>
 
+        <div class="mobile_nav_scroll">
+
+          <div id="nav_button" class="nav_toggle nav_toggle_initial" onclick="toggle_navigation();">
+            <div class="icon">
+              <div id="hamburger" class="hamburger hamburger_initial"></div>
+            </div>
+          </div>
+
+          <div id="nav_list" class="nav_listing">
+            <div class="vertical_scroll">
+              <div class="mobile_nav_item mobile_nav_item_initial footer_links">
+                <a class="fab fa-linkedin nav_footer_item" href="https://www.linkedin.com/in/dom-hutchinson" target="_blank"></a>
+                <a class="fab fa-strava nav_footer_item" href="https://www.strava.com/athletes/1593503" target="_blank"></a>
+                <a class="fas fa-envelope nav_footer_item" href="mailto:dom@domhutchinson.me" target="_blank"></a>
+                <a class="fab fa-twitter nav_footer_item" href="https://twitter.com/DAJHutchinson" target="_blank"></a>
+                <a class="fab fa-github nav_footer_item" href="https://github.com/dajhutchinson" target="_blank"></a>
+              </div>
+              <div class="mobile_nav_item mobile_nav_item_initial"  onclick="location.href='/';">
+                <a href="/">Home</a>
+              </div>
+              <div class="mobile_nav_item mobile_nav_item_initial"  onclick="location.href='/qualifications';">
+                <a href="/qualifications">Education</a>
+              </div>
+              <!-- <div class="mobile_nav_item mobile_nav_item_initial"  onclick="location.href='/library';">
+                <a href="/library">Library</a>
+              </div> -->
+              <div class="mobile_nav_item mobile_nav_item_initial"  onclick="location.href='/experience';">
+                <a href="/experience">Experience</a>
+              </div>
+              <div class="mobile_nav_item mobile_nav_item_initial"  onclick="location.href='/projects';">
+                <a href="/projects">Projects</a>
+              </div>
+              <div class="mobile_nav_item mobile_nav_item_initial"  onclick="location.href='/races';">
+                <a href="/races">Races</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
         <div class="footer">
 
             <div class="footer_links">
-                <a class="fab fa-linkedin footer_item" href="https://www.linkedin.com/in/dom-hutchinson"></a>
-                <a class="fab fa-strava footer_item" href="https://www.strava.com/athletes/1593503"></a>
-                <a class="fas fa-envelope footer_item" href="mailto:dom@domhutchinson.me"></a>
-                <a class="fab fa-twitter footer_item" href="https://twitter.com/DAJHutchinson"></a>
-                <a class="fab fa-github footer_item" href="https://github.com/dajhutchinson"></a>
+                <a class="fab fa-linkedin footer_item" href="https://www.linkedin.com/in/dom-hutchinson" target="_blank"></a>
+                <a class="fab fa-strava footer_item" href="https://www.strava.com/athletes/1593503" target="_blank"></a>
+                <a class="fas fa-envelope footer_item" href="mailto:dom@domhutchinson.me" target="_blank"></a>
+                <a class="fab fa-twitter footer_item" href="https://twitter.com/DAJHutchinson" target="_blank"></a>
+                <a class="fab fa-github footer_item" href="https://github.com/dajhutchinson" target="_blank"></a>
             </div>
 
             <div class="footer_details">
