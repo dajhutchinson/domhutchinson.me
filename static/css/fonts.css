@@ -1,3 +1,9 @@
+/*
+ *  COLLEGIATE
+ *    american letterjacket style. (titles)
+ *    serif, small caps
+ */
+
 @font-face {
     font-family: "CollegiateBlack";
     src: url('../fonts/CollegiateBlackFLF.ttf');
@@ -8,15 +14,27 @@
     src: url('../fonts/CollegiateOutlineFLF.ttf');
 }
 
+/*
+ *  ROBOTO
+ *    (body)
+ *    sans-serif
+ */
+
 @font-face {
     font-family: "RobotoRegular";
     src: url('../fonts/RobotoCondensed-Regular.ttf');
 }
 
-@font-face {
-    font-family: "TypoGraphica";
-    src: url('../fonts/TypoGraphica.otf');
-}
+/*
+ *  RALEWAY
+ *    (body)
+ *    thin, sans-serif
+ */
+
+ @font-face {
+     font-family: "Raleway";
+     src: url('../fonts/Raleway.ttf');
+ }
 
 @font-face {
     font-family: "RalewayBlack";
@@ -26,4 +44,15 @@
 @font-face {
     font-family: "RalewayBold";
     src: url('../fonts/Raleway-Bold.ttf');
+}
+
+/*
+ *  CINZEL
+ *    (titles)
+ *    serif, small caps
+ */
+
+@font-face {
+    font-family: "Cinzel";
+    src: url('../fonts/cinzel.ttf');
 }

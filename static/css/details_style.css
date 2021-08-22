@@ -35,8 +35,9 @@ body {
 }
 
 .details_content_title h2 {
-  font-family: "CollegiateBlack";
-  color: #ddd;
+  font-family: var(--title-font-family);
+  font-weight: var(--title-font-weight);
+  color: var(--font-colour-white);
 }
 
  /*-------*
@@ -54,7 +55,7 @@ body {
 
   padding: 10px;
 
-  color: #ddd;
+  color: var(--font-colour-white);
 
   background-color:#214025;
   background-size:cover;
@@ -62,10 +63,14 @@ body {
 }
 
 .details_scroll_item h2 {
+  font-family: var(--title-font-family);
+  font-weight: var(--title-font-weight);
   margin: 0;
 }
 
 .details_scroll_item h3 {
+  font-family: var(--title-font-family);
+  font-weight: var(--title-font-weight);
   margin: 0;
 }
 
@@ -80,8 +85,9 @@ body {
 
 a.item_title {
   margin: 0px;
-  font-family: "CollegiateBlack";
-  color: #ddd;
+  font-family: var(--title-font-family);
+  font-weight: var(--title-font-weight);
+  color: var(--font-colour-white);
   font-size: 36px;
   transition-duration: .4s;
 }

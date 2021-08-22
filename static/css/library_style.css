@@ -20,8 +20,7 @@
   display: table;
 
   margin: 0px;
-  font-family: "CollegiateBlack";
-  color: #ddd;
+  color: var(--font-colour-white);
 
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -49,11 +48,18 @@
 }
 
 .library_scroll_item h1, .library_scroll_item h2, .library_scroll_item h3 {
+  font-family: var(--title-font-family);
+  font-weight: var(--title-font-weight);
   text-align: center;
+}
+
+.library_scroll_item h2 {
+  margin: 20px 0px 0px 0px;
 }
 
 .library_scroll_item h3 {
   font-size: 16px;
+  margin: 5px 0px 20px 0px;
 }
 
 .library_scroll_item ul {
@@ -61,11 +67,13 @@
 }
 
 .library_scroll_item a {
-  color: #ddd;
+  font-family: var(--title-font-family);
+  font-weight: var(--title-font-weight);
+  color: var(--font-colour-white);
 }
 
 .library_scroll_item a:hover {
-  color:black;
+  color:var(--font-colour-black);
   text-decoration: none;
   cursor: pointer;
 }
