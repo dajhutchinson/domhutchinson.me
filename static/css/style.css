@@ -7,7 +7,7 @@
    --title-font-weight: 900;
    --body-font-family: "Raleway";
    --body-font-weight: 600;
-   --font-colour-white: #ddd;
+   --font-colour-white: #ccc;
    --font-colour-black: #000;
    --dark-green: #214025;
    --light-green: #34623F;
@@ -90,6 +90,8 @@ ul.triangle_bullets {
  *-------*/
 a.h2_link {
   font-size: 30px;
+  font-family: var(--title-font-family);
+  font-weight: var(--title-font-weight);
   color: var(--font-colour-white);
   transition-duration: .4s;
 }

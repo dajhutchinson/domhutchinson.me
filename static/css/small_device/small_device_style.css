@@ -1,5 +1,13 @@
 :root {
   --navigation-radius: 200px;
+  --title-font-family: "Cinzel";
+  --title-font-weight: 900;
+  --body-font-family: "Raleway";
+  --body-font-weight: 600;
+  --font-colour-white: #ccc;
+  --font-colour-black: #000;
+  --dark-green: #214025;
+  --light-green: #34623F;
 }
 
 .header {

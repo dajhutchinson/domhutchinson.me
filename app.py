@@ -73,6 +73,11 @@ def experience():
 def cv():
     return send_file("static/docs/CVTechnical.pdf", attachment_filename="DomHutchinsonCV.pdf")
 
+@app.route('/transcript')
+@app.route('/bristol_transcript')
+def transcript():
+    return send_file("static/docs/Transcript.pdf", attachment_filename="DomHutchinsonTranscript.pdf")
+
 @app.route('/student')
 @cache.cached(timeout=600)
 def student():

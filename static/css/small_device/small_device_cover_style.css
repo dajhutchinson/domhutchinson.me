@@ -30,7 +30,8 @@
 
     color: #ddd;
     /* font-size: 20vh; */
-    font-family: "CollegiateBlack";
+    font-family: var(--title-font-family);
+    font-weight: var(--title-font-weight);
 
     transition: transform 1s, color .2s;
 }
