@@ -186,6 +186,26 @@ a.external_link:hover {
  * FOOTER *
  *-------*/
 
+ .local_footer {
+     width:100%;
+     text-align:left;
+     padding: 0px;
+     margin: 0px;
+     position: relative;
+     height: 30px;
+ }
+
+ .local_footer_content {
+   position: absolute;
+   bottom: 0;
+
+ }
+
+ .local_footer_content p {
+   margin: 0px;
+   padding: 0px;
+ }
+
 .footer {
     width:100%;
     background-color:black;
